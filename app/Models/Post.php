@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
-    protected $fillable = ['page_id', 'title', 'content', 'media', 'seq', 'created_by', 'updated_by', 'deleted_at'];
+    protected $fillable = ['page_id', 'title', 'content', 'media', 'seq', 'status', 'created_by', 'updated_by', 'deleted_at'];
 
     protected static function boot()
     {

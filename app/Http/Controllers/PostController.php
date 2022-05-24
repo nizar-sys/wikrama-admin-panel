@@ -27,7 +27,7 @@ class PostController extends Controller
     public function create()
     {
         $pages = Page::all(['id', 'title']);
-        return view('dashboard.pages.posts.index', compact('pages'));
+        return view('dashboard.pages.posts.create', compact('pages'));
     }
 
     /**
@@ -70,7 +70,7 @@ class PostController extends Controller
     public function edit(Post $post)
     {
         $pages = Page::all(['id', 'title']);
-        return view('dashboard.pages.posts.index', compact('pages', 'post'));
+        return view('dashboard.pages.posts.edit', compact('pages', 'post'));
     }
 
     /**

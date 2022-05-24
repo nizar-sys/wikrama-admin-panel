@@ -230,6 +230,17 @@ class DataTableController extends Controller
         return datatables()->of($albums)
             ->addIndexColumn()
             ->editColumn('title', fn($album)=>str()->title($album->title))
+            ->editColumn('description', fn($album)=> str()->limit(str()->title($album->description), 50))
+            ->editColumn('media', function($album){
+                $media = $album->media;
+                $path = asset('/uploads/images/' . $media);
+                $type = pathinfo($path, PATHINFO_EXTENSION);
+                $data = file_get_contents($path);
+                $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
+
+                $img = '<img data-path="'.$path.'" onclick="showImageDetail(\''.$path.'\')" src="'.$base64.'" class="img-thumbnail img-thumb" width="200px" style="cursor: pointer;">';
+                return $img;
+            })
             ->editColumn('status', fn($album)=> $album->status == '0' ? '<span class="badge badge-danger">In active</span>' : '<span class="badge badge-success">Active</span>')
             ->addColumn('action', function ($album) {
                 $buttons = '<button onclick="updateData(\''.$album->id.'\')" class="btn btn-warning btn-sm">
@@ -243,9 +254,7 @@ class DataTableController extends Controller
 
                 return $buttons;
             })
-            ->editColumn('created_at', fn($album) => date('d/M/Y', strtotime($album->created_at)))
-            ->editColumn('updated_at', fn($album) => date('d/M/Y', strtotime($album->updated_at)))
-            ->rawColumns(['action', 'status'])
+            ->rawColumns(['action', 'media', 'status'])
             ->make(true);
     }
 }

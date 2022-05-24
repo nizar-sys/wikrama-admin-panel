@@ -46,3 +46,16 @@
         <span class="nav-link-text">Pages</span>
     </a>
 </li>
+<li class="nav-item">
+    <a class="nav-link {{ $routeActive == 'posts.index' ? 'active' : '' }}" href="{{ route('posts.index') }}">
+        <i class="text-warning"></i>
+        <span class="nav-link-text">Posts</span>
+    </a>
+</li>
+
+{{-- albums --}}
+<li class="nav-item">
+    <a class="nav-link {{ $routeActive == 'albums.index' ? 'active' : '' }}" href="{{ route('albums.index') }}">
+        <span class="nav-link-text">Albums</span>
+    </a>
+</li>
