@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AlbumController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\DataTableController;
@@ -46,6 +47,7 @@ Route::middleware('auth')->group(function() {
         Route::get('/sliders', [DataTableController::class, 'getSliders'])->name('sliders');
         Route::get('/pages', [DataTableController::class, 'getPages'])->name('pages');
         Route::get('/posts', [DataTableController::class, 'getPosts'])->name('posts');
+        Route::get('/albums', [DataTableController::class, 'getAlbums'])->name('albums');
     });
     
     Route::resource('users', UserController::class);
@@ -54,4 +56,5 @@ Route::middleware('auth')->group(function() {
     Route::resource('sliders', SliderController::class);
     Route::resource('pages', PageController::class);
     Route::resource('posts', PostController::class);
+    Route::resource('albums', AlbumController::class);
 });

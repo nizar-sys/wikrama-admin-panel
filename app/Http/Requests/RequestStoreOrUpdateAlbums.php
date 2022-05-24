@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class RequestStoreOrUpdatePosts extends FormRequest
+class RequestStoreOrUpdateAlbums extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,11 +24,9 @@ class RequestStoreOrUpdatePosts extends FormRequest
     public function rules()
     {
         $rules = [
-            'page_id' => 'required|exists:pages,id',
             'title' => 'required|max:255',
-            'content' => 'required',
+            'description' => 'required',
             'media' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'seq' => 'required|integer',
             'status' => 'required|integer'
         ];
 
@@ -42,11 +40,9 @@ class RequestStoreOrUpdatePosts extends FormRequest
     public function attributes()
     {
         return [
-            'page_id' => 'Page',
             'title' => 'Title',
-            'content' => 'Content',
+            'description' => 'Description',
             'media' => 'Media',
-            'seq' => 'Sequence',
             'status' => 'Status'
         ];
     }

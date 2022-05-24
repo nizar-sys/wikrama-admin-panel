@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Album;
 use App\Models\Informasi;
 use App\Models\InformasiLink;
 use App\Models\Page;
@@ -217,6 +218,33 @@ class DataTableController extends Controller
             })
             ->editColumn('created_at', fn($post) => date('d/M/Y', strtotime($post->created_at)))
             ->editColumn('updated_at', fn($post) => date('d/M/Y', strtotime($post->updated_at)))
+            ->rawColumns(['action', 'status'])
+            ->make(true);
+    }
+    
+    public function getAlbums()
+    {
+        $albumQuery = Album::query();
+        $albums = $albumQuery->orderByDesc('id');
+
+        return datatables()->of($albums)
+            ->addIndexColumn()
+            ->editColumn('title', fn($album)=>str()->title($album->title))
+            ->editColumn('status', fn($album)=> $album->status == '0' ? '<span class="badge badge-danger">In active</span>' : '<span class="badge badge-success">Active</span>')
+            ->addColumn('action', function ($album) {
+                $buttons = '<button onclick="updateData(\''.$album->id.'\')" class="btn btn-warning btn-sm">
+                    <i class="fas fa-pencil-alt"></i>
+                    </button>
+                    
+                    <button onclick="deleteData(\''.$album->id.'\')" class="btn btn-danger btn-sm">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                    ';
+
+                return $buttons;
+            })
+            ->editColumn('created_at', fn($album) => date('d/M/Y', strtotime($album->created_at)))
+            ->editColumn('updated_at', fn($album) => date('d/M/Y', strtotime($album->updated_at)))
             ->rawColumns(['action', 'status'])
             ->make(true);
     }
