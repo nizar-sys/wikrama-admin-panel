@@ -9,6 +9,7 @@
 @section('content')
     {{-- modal --}}
     @include('_partials.modals.modal-crud-user')
+    @include('_partials.modals.image-detail')
 
     <div class="row">
         <div class="col-12">
@@ -149,6 +150,11 @@
         window.location.href = "{{ route('users.edit', ':id') }}".replace(':id', id);
     }
 
+    function showImageDetail(path) {
+        var modalImg = $('#imageDetail');
+        modalImg.modal('show');
+        modalImg.find('#img-view').html('<img src="'+path+'" class="img-fluid">');
+    }
 
     function deleteData(id) {
         event.preventDefault();

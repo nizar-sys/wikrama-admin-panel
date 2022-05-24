@@ -42,7 +42,7 @@ class DataTableController extends Controller
                 $data = file_get_contents($path);
                 $base64 = 'data:image/' . $type . ';base64,' . base64_encode($data);
 
-                $img = '<img data-path="'.$path.'" src="'.$base64.'" class="img-thumbnail img-avatar" width="50px">';
+                $img = '<img data-path="'.$path.'" src="'.$base64.'" onclick="showImageDetail(\''.$path.'\')" class="img-thumbnail img-avatar" width="50px">';
                 return $img;
             })
             ->rawColumns(['action', 'role', 'avatar'])
