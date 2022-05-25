@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\DataTableController;
 use App\Http\Controllers\InformasiController;
 use App\Http\Controllers\InformasiLinkController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
@@ -48,6 +49,7 @@ Route::middleware('auth')->group(function() {
         Route::get('/pages', [DataTableController::class, 'getPages'])->name('pages');
         Route::get('/posts', [DataTableController::class, 'getPosts'])->name('posts');
         Route::get('/albums', [DataTableController::class, 'getAlbums'])->name('albums');
+        Route::get('/messages', [DataTableController::class, 'getMessages'])->name('messages');
     });
     
     Route::resource('users', UserController::class);
@@ -57,4 +59,5 @@ Route::middleware('auth')->group(function() {
     Route::resource('pages', PageController::class);
     Route::resource('posts', PostController::class);
     Route::resource('albums', AlbumController::class);
+    Route::resource('messages', MessageController::class);
 });

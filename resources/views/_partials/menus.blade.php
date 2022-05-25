@@ -59,3 +59,10 @@
         <span class="nav-link-text">Albums</span>
     </a>
 </li>
+
+{{-- messages --}}
+<li class="nav-item">
+    <a class="nav-link {{ $routeActive == 'messages.index' ? 'active' : '' }}" href="{{ route('messages.index') }}">
+        <span class="nav-link-text">Messages</span>
+    </a>
+</li>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Album;
 use App\Models\Informasi;
 use App\Models\InformasiLink;
+use App\Models\Message;
 use App\Models\Page;
 use App\Models\Post;
 use App\Models\Slider;
@@ -255,6 +256,50 @@ class DataTableController extends Controller
                 return $buttons;
             })
             ->rawColumns(['action', 'media', 'status'])
+            ->make(true);
+    }
+
+    public function getMessages()
+    {
+        $messageQuery = Message::query();
+        $messages = $messageQuery->orderByDesc('id');
+
+        return datatables()->of($messages)
+            ->addIndexColumn()
+            ->editColumn('name', fn($message)=>str()->title($message->name))
+            ->editColumn('email', fn($message)=>$message->email)
+            ->editColumn('message', fn($message)=>str()->title($message->message))
+            ->editColumn('status', function($message){
+                $bgBadge = 'badge badge-';
+                $status = $message->status;
+
+                if($status == 'pending'){
+                    $bgBadge .= 'warning';
+                } else if($status == 'spam'){
+                    $bgBadge .= 'danger';
+                } else if($status == 'approved'){
+                    $bgBadge .= 'success';
+                }
+
+                $status = '<span class="'.$bgBadge.'">'.$status.'</span>';
+
+                return $status;
+            })
+            ->addColumn('action', function ($message) {
+                $buttons = '<button onclick="updateData(\''.$message->id.'\')" class="btn btn-warning btn-sm">
+                    <i class="fas fa-pencil-alt"></i>
+                    </button>
+                    
+                    <button onclick="deleteData(\''.$message->id.'\')" class="btn btn-danger btn-sm">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                    ';
+
+                return $buttons;
+            })
+            ->editColumn('created_at', fn($message) => date('d/M/Y', strtotime($message->created_at)))
+            ->editColumn('updated_at', fn($message) => date('d/M/Y', strtotime($message->updated_at)))
+            ->rawColumns(['action', 'status'])
             ->make(true);
     }
 }
