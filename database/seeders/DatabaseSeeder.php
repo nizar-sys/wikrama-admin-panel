@@ -15,6 +15,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
+            SettingSeeder::class,
+            VirtualWikrama::class,
             UserSeeder::class
         ]);
         // \App\Models\User::factory(10)->create();

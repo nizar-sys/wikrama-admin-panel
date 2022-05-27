@@ -12,6 +12,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RouteController;
+use App\Http\Controllers\SettingController;
 use App\Http\Controllers\SliderController;
 
 /*
@@ -50,6 +51,14 @@ Route::middleware('auth')->group(function() {
         Route::get('/posts', [DataTableController::class, 'getPosts'])->name('posts');
         Route::get('/albums', [DataTableController::class, 'getAlbums'])->name('albums');
         Route::get('/messages', [DataTableController::class, 'getMessages'])->name('messages');
+    });
+
+    Route::prefix('settings')->group(function(){
+        Route::get('/sosmed', [SettingController::class, 'index'])->name('sosmed.index');
+        Route::post('/sosmed', [SettingController::class, 'store'])->name('sosmed.store');
+
+        Route::get('/virtual-wikrama', [SettingController::class, 'indexVirtual'])->name('virtual-wikrama.index');
+        Route::post('/virtual-wikrama', [SettingController::class, 'storeVirtual'])->name('virtual-wikrama.store');
     });
     
     Route::resource('users', UserController::class);

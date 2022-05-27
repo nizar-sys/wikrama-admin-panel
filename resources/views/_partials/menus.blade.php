@@ -66,3 +66,22 @@
         <span class="nav-link-text">Messages</span>
     </a>
 </li>
+
+{{-- settings --}}
+<li class="nav-item">
+    <a class="nav-link" href="#">
+        <span class="nav-link-text">Settings</span>
+    </a>
+</li>
+<li class="nav-item">
+    <a class="nav-link {{ $routeActive == 'sosmed.index' ? 'active' : '' }}" href="{{ route('sosmed.index') }}">
+        <i class="text-warning"></i>
+        <span class="nav-link-text">Social Media Links</span>
+    </a>
+</li>
+<li class="nav-item">
+    <a class="nav-link {{ $routeActive == 'virtual-wikrama.index' ? 'active' : '' }}" href="{{ route('virtual-wikrama.index') }}">
+        <i class="text-warning"></i>
+        <span class="nav-link-text">Wikrama Virtuals</span>
+    </a>
+</li>
