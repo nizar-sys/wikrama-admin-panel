@@ -37,6 +37,8 @@
     <!-- Page plugins -->
     <!-- Argon CSS -->
     <link rel="stylesheet" href="{{ asset('/assets/css/argon.css?v=1.2.0') }}" type="text/css">
+    <script src="{{ asset('/assets/vendor/jquery/dist/jquery.min.js') }}"></script>
+
 
     <!-- DataTables -->
     <link rel="stylesheet" href="{{ asset('/assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
@@ -51,9 +53,12 @@
     <script src="{{ asset('/assets/js/snackbar.min.js') }}"></script>
 
     <!-- Select2 -->
-  <link rel="stylesheet" href="{{ asset('/plugins/select2/css/select2.min.css') }}">
-  <link rel="stylesheet" href="{{ asset('/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('/assets/plugins/select2/css/select2.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('/assets/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
 
+  {{-- dropify --}}
+  <link rel="stylesheet" href="{{ asset('/assets/css/dropify.css') }}">
+  <script src="{{ asset('/assets/js/dropify.js') }}"></script>
     @yield('c_css')
 </head>
 
@@ -203,7 +208,6 @@
     </div>
     <!-- Argon Scripts -->
     <!-- Core -->
-    <script src="{{ asset('/assets/vendor/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ asset('/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('/assets/vendor/js-cookie/js.cookie.js') }}"></script>
     <script src="{{ asset('/assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js') }}"></script>
@@ -235,7 +239,7 @@
     <script src="{{ asset('/assets/plugins/datatables-buttons/js/buttons.colVis.min.js') }}"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Select2 -->
-    <script src="{{ asset('/plugins/select2/js/select2.full.min.js') }}"></script>
+    <script src="{{ asset('/assets/plugins/select2/js/select2.full.min.js') }}"></script>
     <script>
         @if (Session::has('success'))
             Snackbar.show({
@@ -256,6 +260,15 @@
             actionTextColor: '#212529',
             })
         @endif;
+
+        $('.dropify-media').dropify({
+            messages: {
+                default: 'Drag and drop a file here or click',
+                replace: 'Drag and drop or click to replace',
+                remove: 'Remove',
+                error: 'Ooops, something wrong happended.'
+            },
+        });
     </script>
 
     @yield('script')

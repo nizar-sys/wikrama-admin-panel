@@ -113,6 +113,7 @@
                         return this.src;
                     }).get();
 
+                    console.log(img);
                     for (var i = 0, c = 1; i < img.length; i++, c++) {
                             doc.content[1].table.body[c][3] = {
                                 image: img[i],
@@ -142,6 +143,20 @@
             @endif
         ],
     });
+
+    function toDataURL(url, callback) {
+        let xhRequest = new XMLHttpRequest();
+        xhRequest.onload = function () {
+            let reader = new FileReader();
+            reader.onloadend = function () {
+            callback(reader.result);
+            }
+            reader.readAsDataURL(xhRequest.response);
+        };
+        xhRequest.open('GET', url);
+        xhRequest.responseType = 'blob';
+        xhRequest.send();
+    }
 
     function updateData(id) {
         window.location.href = "{{ route('sliders.edit', ':id') }}".replace(':id', id);

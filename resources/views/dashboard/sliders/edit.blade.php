@@ -87,7 +87,7 @@
 
                         <div class="form-group mb-3">
                             <label for="media">Media</label>
-                            <input type="file" class="form-control @error('media') is-invalid @enderror dropify"
+                            <input type="file" class="dropify-media form-control @error('media') is-invalid @enderror dropify"
                                 id="media" placeholder="Media Slider"
                                 name="media">
 
