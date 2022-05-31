@@ -59,6 +59,7 @@
   {{-- dropify --}}
   <link rel="stylesheet" href="{{ asset('/assets/css/dropify.css') }}">
   <script src="{{ asset('/assets/js/dropify.js') }}"></script>
+  <script src="https://cdn.ckeditor.com/4.19.0/full-all/ckeditor.js"></script>
     @yield('c_css')
 </head>
 
@@ -269,6 +270,7 @@
                 error: 'Ooops, something wrong happended.'
             },
         });
+        CKEDITOR.replace( 'ckeditor-backend' );
     </script>
 
     @yield('script')

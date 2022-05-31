@@ -95,7 +95,7 @@
 
                         <div class="form-group mb-3">
                             <label for="content">Content</label>
-                            <textarea class="form-control @error('content') is-invalid @enderror" id="content"
+                            <textarea class="form-control @error('content') is-invalid @enderror" id="ckeditor-backend"
                                 placeholder="Content Post" name="content" cols="30" rows="10">
                                 {{ $post->content }}
                             </textarea>

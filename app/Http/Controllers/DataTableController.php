@@ -203,7 +203,7 @@ class DataTableController extends Controller
         return datatables()->of($posts)
             ->addIndexColumn()
             ->editColumn('title', fn($post)=>str()->title($post->title))
-            ->editColumn('content', fn($post) => html_entity_decode(str()->limit($post->content, 100, '...')))
+            ->editColumn('content', fn($post) => strip_tags(str()->limit($post->content, 100, '...')))
             ->editColumn('status', fn($post)=> $post->status == '0' ? '<span class="badge badge-danger">In active</span>' : '<span class="badge badge-success">Active</span>')
             ->addColumn('action', function ($post) {
                 $buttons = '<button onclick="updateData(\''.$post->id.'\')" class="btn btn-warning btn-sm">
