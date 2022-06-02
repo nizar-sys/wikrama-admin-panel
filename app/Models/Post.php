@@ -24,4 +24,10 @@ class Post extends Model
             $model->updated_at = now();
         });
     }
+
+    // make scope active
+    public function scopeActive($query)
+    {
+        return $query->where('status', 1);
+    }
 }

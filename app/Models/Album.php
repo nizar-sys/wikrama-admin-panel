@@ -24,4 +24,9 @@ class Album extends Model
             $model->updated_at = now();
         });
     }
+    
+    public function scopeActive($query)
+    {
+        return $query->where('status', 1);
+    }
 }

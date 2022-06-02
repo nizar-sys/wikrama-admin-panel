@@ -26,7 +26,7 @@ class RequestStoreOrUpdateSlider extends FormRequest
         $rules = [
             'title' => 'required|string|max:255',
             'subtitle' => 'required|string|max:255',
-            'media' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'media' => 'image|mimes:jpeg,png,jpg,gif,svg|max:10000',
             'position' => 'required|string',
             'status' => 'required|numeric',
         ];
