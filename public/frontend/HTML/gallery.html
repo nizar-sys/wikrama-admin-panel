@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SMK WIKRAMA Bogor</title>
+
+        <!-- bagian import -->
+        <link rel="icon" href="/assets/wikrama-logo.png" />
+        <link rel="stylesheet" type="text/css" href="/CSS/style.css">
+
+        <!-- ini font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <!-- Fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body>
+        <div class="wk-page">
+            <!-- Jumbotron -->
+            <div class="jumbotron">
+                <img src="" alt="Jumbotron">
+            </div>
+
+
+            <!-- Title Page -->
+            <div class="title-page">
+                <div class="decoration-left">
+                    <div class="dl-1"></div>
+                    <div class="dl-2"></div>
+                </div>
+
+                <div class="decoration-title">
+                    <h1>Gallery</h1>
+
+                    <div class="line-title-logo">
+                        <div class="space-logo">
+                            <svg width="50" height="46" viewBox="0 0 50 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M43.75 8.41702H35.4492V6.26383C35.4492 4.50213 34.847 3.01773 33.6426 1.81064C32.4382 0.603546 30.957 0 29.1992 0H20.8008C19.043 0 17.5618 0.603546 16.3574 1.81064C15.153 3.01773 14.5508 4.50213 14.5508 6.26383V8.41702H6.25C4.49219 8.41702 3.01107 9.00426 1.80664 10.1787C0.602214 11.3532 0 12.8539 0 14.6809V23C0 24.3702 0.683594 25.0553 2.05078 25.0553V41.7915C2.05078 42.9007 2.47396 43.8794 3.32031 44.7277C4.16667 45.5759 5.14323 46 6.25 46H43.75C44.8568 46 45.8333 45.5759 46.6797 44.7277C47.526 43.8794 47.9492 42.9007 47.9492 41.7915V25.0553C49.3164 25.0553 50 24.3702 50 23V14.6809C50 12.8539 49.3978 11.3532 48.1934 10.1787C46.9889 9.00426 45.5078 8.41702 43.75 8.41702ZM18.75 6.26383C18.75 5.6766 18.9453 5.18723 19.3359 4.79574C19.7266 4.40426 20.2148 4.20851 20.8008 4.20851H29.1992C29.7852 4.20851 30.2734 4.40426 30.6641 4.79574C31.0547 5.18723 31.25 5.6766 31.25 6.26383V8.41702H18.75V6.26383ZM6.25 41.7915V25.0553H18.75V31.3191C18.75 32.4936 19.1569 33.4887 19.9707 34.3043C20.7845 35.1199 21.7773 35.5277 22.9492 35.5277H27.0508C28.2227 35.5277 29.2155 35.1199 30.0293 34.3043C30.8431 33.4887 31.25 32.4936 31.25 31.3191V25.0553H43.75V41.7915H6.25ZM22.9492 31.3191V25.0553H27.0508V31.3191H22.9492ZM45.8008 20.9447H4.19922V14.6809C4.19922 13.2454 4.88281 12.5277 6.25 12.5277H43.75C45.1172 12.5277 45.8008 13.2454 45.8008 14.6809V20.9447Z" fill="#C6C6C6"/>
+                            </svg>                                                                                                                         
+                        </div>
+                    </div>
+                </div>
+
+                <div class="decoration-right">
+                    <div class="dr-1"></div>
+                    <div class="dr-2"></div>
+                </div>
+            </div>
+
+            <!-- Content Image -->
+            <div class="content-image" style="margin-top: 100px;">
+                <div class="subcontent-image-3">
+                    <div class="content-card">
+                        <div class="content-image-page-3">
+                            <img src="" class="pict-card" alt="Image" onclick="openModal()">
+                        </div>
+
+                        <div class="content-text" style="text-align: center;">
+                            <h3>An Excellent Generation</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination"></div>
+            
+            <div class="modal-image">
+                <span class="btn-close" onclick="closeModal();"><i class="fa-solid fa-xmark"></i></span>
+
+                <div class="content-modal">
+                    <img src="" id="" alt="An Excellent Generation" class="modalImg">
+                    <h3 class="caption"></h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Script -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="/JavaScript/script.js"></script>
+    </body>
+</html>
