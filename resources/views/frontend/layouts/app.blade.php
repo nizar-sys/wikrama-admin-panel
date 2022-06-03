@@ -204,51 +204,53 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     @yield('script') 
     <script>
-        function postMessage() {
-            event.preventDefault();
-            Snackbar.show({
-                text: "Mengirim Pesan...",
-                backgroundColor: '#17a2b8',
-                actionTextColor: '#212529',
-            })
-            var name = $('input[name="name"]').val();
-            var email = $('input[name="email"]').val();
-            var message = $('textarea[name="pesan"]').val();
-
-            $.ajax({
-                url: "{{ route('send.message') }}",
-                type: 'POST',
-                data: {
-                    _token: "{{ csrf_token() }}",
-                    name,
-                    email,
-                    message
-                },
-                success: function(data) {
-                    Swal.fire({
-                        title: 'Pesan Terkirim',
-                        text: 'Terima kasih atas pesan anda',
-                        icon: 'success',
-                        confirmButtonText: 'Ok'
-                    })
-                },
-                error: function(data) {
-                    Swal.fire({
-                        title: 'Pesan Gagal',
-                        text: 'Pesan anda gagal terkirim',
-                        icon: 'error',
-                        confirmButtonText: 'Ok'
-                    })
-                },
-            })
-
-            // ajax onload
-            $('input[name="name"]').val('');
-            $('input[name="email"]').val('');
-            $('textarea[name="pesan"]').val('');
-
-            return false;
-        }
+        $(document).ready(() => {
+            function postMessage() {
+                event.preventDefault();
+                Snackbar.show({
+                    text: "Mengirim Pesan...",
+                    backgroundColor: '#17a2b8',
+                    actionTextColor: '#212529',
+                })
+                var name = $('input[name="name"]').val();
+                var email = $('input[name="email"]').val();
+                var message = $('textarea[name="pesan"]').val();
+    
+                $.ajax({
+                    url: "{{ route('send.message') }}",
+                    type: 'POST',
+                    data: {
+                        _token: "{{ csrf_token() }}",
+                        name,
+                        email,
+                        message
+                    },
+                    success: function(data) {
+                        Swal.fire({
+                            title: 'Pesan Terkirim',
+                            text: 'Terima kasih atas pesan anda',
+                            icon: 'success',
+                            confirmButtonText: 'Ok'
+                        })
+                    },
+                    error: function(data) {
+                        Swal.fire({
+                            title: 'Pesan Gagal',
+                            text: 'Pesan anda gagal terkirim',
+                            icon: 'error',
+                            confirmButtonText: 'Ok'
+                        })
+                    },
+                })
+    
+                // ajax onload
+                $('input[name="name"]').val('');
+                $('input[name="email"]').val('');
+                $('textarea[name="pesan"]').val('');
+    
+                return false;
+            }
+        })
     </script>
   </body>
 </html>
