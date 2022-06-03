@@ -25,7 +25,7 @@ class RequestStoreOrUpdateMessage extends FormRequest
     {
         $rules = [
             'name' => 'required|max:255',
-            'email' => 'required|email',
+            'email' => 'required',
             'message' => 'required'
         ];
 

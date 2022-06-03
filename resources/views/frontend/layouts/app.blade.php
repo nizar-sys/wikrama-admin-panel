@@ -186,11 +186,11 @@
                   <h4>Pesan</h4>
 
                   <div class="form-content">
-                      <form action="#" onsubmit="postMessage()">
+                      <form action="#" onsubmit="return false;">
                           <input type="text" name="name" placeholder="Nama..." required>
                           <input type="email" name="email" placeholder="Email..." required>
                           <textarea name="pesan" placeholder="Pesan Anda..." required></textarea><br>
-                          <button type="submit">Submit</button>
+                          <button type="button" id="post-message-btn">Submit</button>
                       </form>
                   </div>
               </div>
@@ -205,7 +205,7 @@
     @yield('script') 
     <script>
         $(document).ready(() => {
-            function postMessage() {
+            $('#post-message-btn').on('click', function(){
                 event.preventDefault();
                 Snackbar.show({
                     text: "Mengirim Pesan...",
@@ -249,7 +249,7 @@
                 $('textarea[name="pesan"]').val('');
     
                 return false;
-            }
+            })
         })
     </script>
   </body>
