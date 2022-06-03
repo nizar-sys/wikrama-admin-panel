@@ -216,7 +216,7 @@
             var message = $('textarea[name="pesan"]').val();
 
             $.ajax({
-                url: "{{ route('messages.store') }}",
+                url: "{{ route('send.message') }}",
                 type: 'POST',
                 data: {
                     _token: "{{ csrf_token() }}",
