@@ -18,4 +18,11 @@ class FrontEndController extends Controller
         $galeries = Album::active()->take(4)->get(['title', 'media'])->sortByDesc('created_at');
         return view('frontend.app.homepage', compact('carouselGalery', 'beritaAcara', 'virtualWikrama', 'galeries'));
     }
+
+    public function beritaDetail($judul)
+    {
+        $judul = str_replace('-', ' ', $judul);
+        $berita = Post::whereTitle($judul)->get(['title', 'content', 'media'])->firstOrFail();
+        return view('frontend.app.berita.detail', compact('berita'));
+    }
 }

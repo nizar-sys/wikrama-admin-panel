@@ -29,6 +29,7 @@ use App\Http\Controllers\SliderController;
 
 # ------ Unauthenticated routes ------ #
 Route::get('/', [FrontEndController::class, 'landingPage']);
+Route::get('/berita/{judul}', [FrontEndController::class, 'beritaDetail'])->name('berita.detail');
 
 
 # ------ Backend routes ------ #

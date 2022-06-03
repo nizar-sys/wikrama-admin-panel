@@ -1,19 +1,21 @@
-@extends('frontend.layouts.homepage')
+@extends('frontend.layouts.app')
 @section('title', 'Home')
 
 @section('galeri-carousel')
-<ol class="carousel__viewport">
-    <div class="gradient-slide"></div>
-    @foreach ($carouselGalery as $galeri)
-    <li id="carousel__slide{{$galeri->id}}"
-        tabindex="0"
-        class="carousel__slide">
-        <img src="{{asset('/uploads/images/' . $galeri->media)}}" height="unset" width="unset" alt="Carousel Images">
-        <div class="carousel__snapper">
-        </div>
-    </li>
-    @endforeach
-</ol>
+<section class="carousel" aria-label="Gallery">
+  <ol class="carousel__viewport">
+      <div class="gradient-slide"></div>
+      @foreach ($carouselGalery as $galeri)
+      <li id="carousel__slide{{$galeri->id}}"
+          tabindex="0"
+          class="carousel__slide">
+          <img src="{{asset('/uploads/images/' . $galeri->media)}}" height="unset" width="unset" alt="Carousel Images">
+          <div class="carousel__snapper">
+          </div>
+      </li>
+      @endforeach
+  </ol>
+</section>
 @endsection
 
 @section('berita-acara')
@@ -38,7 +40,7 @@
           <div class="content-berita-text">
             <p id="content-berita-text">{{str()->title($berita->title)}}</p>
           </div>
-          <a href="{{'/berita/' . str()->slug($berita->title)}}" id="content-berita-btn">Baca</a>
+          <a href="{{ route('berita.detail', str()->slug($berita->title)) }}" id="content-berita-btn">Baca</a>
         </div>
       </div>
     </div>
