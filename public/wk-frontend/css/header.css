@@ -1,3 +1,9 @@
+header {
+    position: fixed;
+    z-index: 4;
+    width: 100%;
+}
+
 .header {
     padding: 1vh;
     display: flex;
@@ -164,8 +170,124 @@
     border-bottom: solid 2px #FFE603;
 }
 
+#section-header-below-discovery.active-head-discovery {
+    border-bottom: solid 2px #FFE603;
+    opacity: 1;
+}
+
+#section-header-below-major-competency.active-head-major {
+    border-bottom: solid 2px #FFE603;
+    opacity: 1;
+}
+
+#section-header-below-education.active-head-education {
+    border-bottom: solid 2px #FFE603;
+    opacity: 1;
+}
+
+#section-header-below-cultures.active-head-cultures {
+    border-bottom: solid 2px #FFE603;
+    opacity: 1;
+}
+
+#section-header-below-campus.active-head-campus {
+    border-bottom: solid 2px #FFE603;
+    opacity: 1;
+}
+
 .section-header-below-1 {
     margin-left: 6px;
+}
+
+.anak-discovery {
+    display: none;
+    position: absolute;
+    z-index: 4;
+    transform: translate(13%, 0);
+}
+
+.anak-major {
+    display: none;
+    position: absolute;
+    z-index: 4;
+    transform: translate(16%,0);
+}
+
+.anak-major.active-major {
+    display: block;
+}
+
+.anak-discovery.active-discovery {
+    display: block;
+}
+
+.anak-education {
+    display: none;
+    position: absolute;
+    z-index: 4;
+    transform: translate(9%, 0);
+}
+
+.anak-education.active-education {
+    display: block;
+}
+
+.anak-cultures {
+    display: none;
+    position: absolute;
+    z-index: 4;
+    transform: translate(7%, 0);
+}
+
+.anak-cultures.active-cultures {
+    display: block;
+}
+
+.anak-campus {
+    display: none;
+    position: absolute;
+    z-index: 4;
+    transform: translate(5%,0);
+}
+
+.anak-campus.active-campus {
+    display: block;
+}
+
+.semua-anak {
+    background-color: white;
+    width: 70rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 15px 10px;
+    border-bottom: solid 2px #001E42;
+}
+
+.semua-anak .anak {
+    width: 20rem;
+    padding: 20px 20px;
+    margin: 0 20px;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+.semua-anak .anak:hover {
+    background-color: rgb(228, 228, 228);
+}
+
+.semua-anak .anak h3 {
+    color: #3a3a3a;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.semua-anak .anak p {
+    color: #3a3a3a;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
 }
 
 @media screen and (max-width: 1200px) {
