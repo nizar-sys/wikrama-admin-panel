@@ -10,8 +10,7 @@
     <!-- bagian import -->
     <link rel="icon" href="{{ asset('/frontend') }}/assets/wikrama-logo.png" />
     <link rel="stylesheet" type="text/css" href="{{ asset('/frontend') }}/css/header.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="/js/uiSystem.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ asset('/frontend') }}/css/homepage.css">
 
 
@@ -869,6 +868,8 @@
             <h3>Copyright &copy; 2022 - SMK Wikrama Bogor. All Right Reserved</h3>
         </div>
     </footer>
+
+    <script src="{{ asset('/frontend') }}/js/uiSystem.js"></script>
 </body>
 
 </html>

@@ -899,7 +899,7 @@ footer .footer-top .footer-content {
 footer .copyright {
   width: 100%;
   height: 50px;
-  background-image: url(/Assets/header-texture.png);
+  background-image: url(/frontend/assets/header-texture.png);
   background-size: cover;
   display: flex;
   justify-content: center;
