@@ -46,7 +46,7 @@
                         <img src="{{ asset('/uploads/images/' . $berita->media) }}" alt="{{str()->title($berita->title)}}">
                     </div>
     
-                    <div class="point-content" style="margin-top: 50px;">
+                    <div class="point-content">
                         {!! $berita->content !!}
                     </div>
                 </div>
@@ -60,6 +60,13 @@
         var pointContent = document.getElementsByClassName("point-content")[0];
         pointContent.style.fontSize = "13pt";
         pointContent.style.lineHeight = "1.5";
+        // set max with of content
+        var maxWidth = pointContent.offsetWidth;
+        var currentWidth = pointContent.scrollWidth;
+        if (currentWidth > maxWidth) {
+            pointContent.style.fontSize = "10pt";
+            pointContent.style.lineHeight = "1.2";
+        }
         // add breakline
         pointContent.innerHTML = pointContent.innerHTML.replace(/\n/g, "<br>");
     </script>

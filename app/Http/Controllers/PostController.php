@@ -38,7 +38,10 @@ class PostController extends Controller
      */
     public function store(RequestStoreOrUpdatePosts $request)
     {
-        $validated = $request->validated();
+        $lastOrder = Post::lastOrder();
+        $validated = $request->validated() + [
+            'seq' => $lastOrder + 1,
+        ];
 
         // upload media
         $fileName = time() . '-post.' . $request->file('media')->getClientOriginalExtension();

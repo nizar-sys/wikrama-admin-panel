@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{$siteSetting->site_title}} - @yield('title')</title>
     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- bagian import -->
     <link rel="icon" href="{{asset('wk-frontend/')}}/assets/wikrama-logo.png" />
     <link rel="stylesheet" type="text/css" href="{{asset('wk-frontend/')}}/css/header.css">
@@ -34,307 +35,66 @@
 </head>
 <body>
     <!-- header css nya satu  -->
-    {{-- <div class="header-wrap-texture">
-        <img class="header-texture" src="{{asset('wk-frontend/')}}/assets/header-texture.png" height="unset" width="unset" alt="Texture">
-        <div class="header">
-            <div id="hamburger-icon-responsive">
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M6 36V33H42V36ZM6 25.5V22.5H42V25.5ZM6 15V12H42V15Z"/></svg>
-                  </a>
-            </div>
-            <div class="header-section-wrap">
-                <div id="section-wrap">
-                    <a href="">Teaching Factory</a>
-                    <div id="indicator-section" class="indicator-section-one"></div>
-                </div>
-                <div id="section-wrap">
-                    <a href="">Info Lowongan Kerja</a>
-                    <div id="indicator-section" class="indicator-section-two"></div>
-                </div>
-                <div id="section-wrap">
-                    <a href="">PPDB 2022-2023</a>
-                    <div id="indicator-section" class="indicator-section-three"></div>
-                </div>
-                <div class="wikrama-logo">
-                    <img src="{{asset('wk-frontend/')}}/assets/wikrama-logo.png" height="unset" width="unset" alt="Logo Wikrama">
-                    <h3>SMK WIKRAMA BOGOR</h3>
-                </div>
-            </div>
-            <div class="btn-header">
-                <button class="btn-contact-us">Contact Us</button>
-                <div class="btn-contact-search">
-                    <label for="search">
-                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="7" cy="7" r="6" stroke="#001E42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M11.2402 11.707L14.7643 15.2219" stroke="#001E42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>   
-                </label>  
-                    <input type="text" name="search" id="input-search" placeholder="Search">     
-                </div>
-            </div>
-        </div>
-        <div class="header-below">
-            <a href="/" id="section-header-below" class="section-header-below-1">Home</a>
-            <a href="" id="section-header-below" class="section-header-below-2">Discover Wikrama</a>
-            <a href="" id="section-header-below" class="section-header-below-3">Major Competency</a>
-            <a href="" id="section-header-below" class="section-header-below-4">Education Process</a>
-            <a href="" id="section-header-below" class="section-header-below-5">Cultures</a>
-            <a href="" id="section-header-below" class="section-header-below-6">Campus Resources</a>
-            <a href="" id="section-header-below" class="section-header-below-7">BKK dan Alumni</a>
-            <a href="" id="section-header-below" class="section-header-below-8">Berita</a>
-        </div>
-    </div> --}}
     <header>
         <div class="header-wrap-texture">
-          <img class="header-texture" src="{{ asset('/wk-frontend') }}/assets/header-texture.png" height="unset" width="unset" alt="Texture">
-          <div class="header">
-              <div id="hamburger-icon-responsive">
-                  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                      <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M6 36V33H42V36ZM6 25.5V22.5H42V25.5ZM6 15V12H42V15Z"/></svg>
-                    </a>
-              </div>
-              <div class="header-section-wrap">
-                  <div id="section-wrap">
-                      <a href="">Teaching Factory</a>
-                      <div id="indicator-section" class="indicator-section-one"></div>
-                  </div>
-                  <div id="section-wrap">
-                      <a href="">Info Lowongan Kerja</a>
-                      <div id="indicator-section" class="indicator-section-two"></div>
-                  </div>
-                  <div id="section-wrap">
-                      <a href="">PPDB 2022-2023</a>
-                      <div id="indicator-section" class="indicator-section-three"></div>
-                  </div>
-                  <div class="wikrama-logo">
-                      <img src="{{ asset('/wk-frontend') }}/assets/wikrama-logo.png" height="unset" width="unset" alt="Logo Wikrama">
-                      <h3>SMK WIKRAMA BOGOR</h3>
-                  </div>
-              </div>
-              <div class="btn-header">
-                  <button class="btn-contact-us">Contact Us</button>
-                  <div class="btn-contact-search">
-                      <label for="search">
-                          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <circle cx="7" cy="7" r="6" stroke="#001E42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                              <path d="M11.2402 11.707L14.7643 15.2219" stroke="#001E42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>   
-                  </label>  
-                      <input type="text" name="search" id="input-search" placeholder="Search">     
-                  </div>
-              </div>
-          </div>
-          <div class="anak-header-dan-headernya">
-            <div class="header-below">
-              <a href="" id="section-header-below-home" class="section-header-below-1">Home</a>
-              <a href="" id="section-header-below-discovery" class="section-header-below-2">Discover Wikrama</a>
-              <a href="" id="section-header-below-major-competency" class="section-header-below-3">Major Competency</a>
-              <a href="" id="section-header-below-education" class="section-header-below-4">Education Process</a>
-              <a href="" id="section-header-below-cultures" class="section-header-below-5">Cultures</a>
-              <a href="" id="section-header-below-campus" class="section-header-below-6">Campus Resources</a>
-              <a href="" id="section-header-below" class="section-header-below-7">BKK dan Alumni</a>
-              <a href="" id="section-header-below" class="section-header-below-8">Berita</a>
-          </div>
-          <div class="child-header-below">
-            <div class="anak-discovery">
-              <div class="semua-anak">
-                <a href="#" class="anak">
-                  <h3>Peraturan Sekolah</h3>
-                  <p>Peraturan sekolah Di SMK wikrama Bogor</p>
-                </a>
-  
-                <a href="#" class="anak">
-                  <h3>Rencana Strategi & Prestasi</h3>
-                  <p>Rencama strategi dan prestasi di SMK Wikrama Bogor</p>
-                </a>
-  
-                <a href="#" class="anak" >
-                <h3>Rencana Strategi & Prestasi</h3>
-                <p>Rencama strategi dan prestasi di SMK Wikrama Bogor</p>
-                </a>
-  
-                <a href="#" class="anak">
-                <h3>Rencana Strategi & Prestasi</h3>
-                <p>Rencama strategi dan prestasi di SMK Wikrama Bogor</p>
-                </a>
-  
-                <a href="#" class="anak">
-                <h3>Rencana Strategi & Prestasi</h3>
-                <p>Rencama strategi dan prestasi di SMK Wikrama Bogor</p>
-                </a>      
-  
-                <a href="#" class="anak">
-                <h3>Rencana Strategi & Prestasi</h3>
-                <p>Rencama strategi dan prestasi di SMK Wikrama Bogor</p>
-                </a>
-        
-                <a href="#" class="anak">
-                <h3>Rencana Strategi & Prestasi</h3>
-                <p>Rencama strategi dan prestasi di SMK Wikrama Bogor</p>
-                </a>
-              </div>
+            <img class="header-texture" src="{{asset('wk-frontend/')}}/assets/header-texture.png" height="unset" width="unset" alt="Texture">
+            <div class="header">
+                <div id="hamburger-icon-responsive">
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M6 36V33H42V36ZM6 25.5V22.5H42V25.5ZM6 15V12H42V15Z"/></svg>
+                      </a>
+                </div>
+                <div class="header-section-wrap">
+                    <div id="section-wrap">
+                        <a href="">Teaching Factory</a>
+                        <div id="indicator-section" class="indicator-section-one"></div>
+                    </div>
+                    <div id="section-wrap">
+                        <a href="">Info Lowongan Kerja</a>
+                        <div id="indicator-section" class="indicator-section-two"></div>
+                    </div>
+                    <div id="section-wrap">
+                        <a href="">PPDB 2022-2023</a>
+                        <div id="indicator-section" class="indicator-section-three"></div>
+                    </div>
+                    <div class="wikrama-logo">
+                        <img src="{{asset('wk-frontend/')}}/assets/wikrama-logo.png" height="unset" width="unset" alt="Logo Wikrama">
+                        <h3>SMK WIKRAMA BOGOR</h3>
+                    </div>
+                </div>
+                <div class="btn-header">
+                    <button class="btn-contact-us">Contact Us</button>
+                    <div class="btn-contact-search">
+                        <label for="search">
+                            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="7" cy="7" r="6" stroke="#001E42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M11.2402 11.707L14.7643 15.2219" stroke="#001E42" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>   
+                    </label>  
+                        <input type="text" name="search" id="input-search" placeholder="Search">     
+                    </div>
+                </div>
             </div>
-  
-            <div class="anak-major">
-              <div class="semua-anak">
-                <a href="#" class="anak">
-                  <h3>Peraturan Sekolah</h3>
-                  <p>Peraturan sekolah Di SMK wikrama Bogor</p>
-                </a>
-  
-                <a href="#" class="anak">
-                  <h3>Rencana Strategi & Prestasi</h3>
-                  <p>Rencama strategi dan prestasi di SMK Wikrama Bogor</p>
-                </a>
-  
-                <a href="#" class="anak" >
-                <h3>Rencana Strategi & Prestasi</h3>
-                <p>Rencama strategi dan prestasi di SMK Wikrama Bogor</p>
-                </a>
-  
-                <a href="#" class="anak">
-                <h3>Rencana Strategi & Prestasi</h3>
-                <p>Rencama strategi dan prestasi di SMK Wikrama Bogor</p>
-                </a>
-  
-                <a href="#" class="anak">
-                <h3>Rencana Strategi & Prestasi</h3>
-                <p>Rencama strategi dan prestasi di SMK Wikrama Bogor</p>
-                </a>      
-  
-                <a href="#" class="anak">
-                <h3>Rencana Strategi & Prestasi</h3>
-                <p>Rencama strategi dan prestasi di SMK Wikrama Bogor</p>
-                </a>
-        
-                <a href="#" class="anak">
-                <h3>Rencana Strategi & Prestasi</h3>
-                <p>Rencama strategi dan prestasi di SMK Wikrama Bogor</p>
-                </a>
-              </div>
+            <div class="header-below dropdown">
+                <a href="/" id="section-header-below" class="section-header-below-1">Home</a>
+                @foreach ($pages as $page)
+                    @php
+                        $strTitle = str()->title($page->title);
+                        $strSlug = str()->slug($page->title);
+                    @endphp
+                <a href="{{route('page.detail', $strSlug)}}" id="section-header-below dropdownMenuButton-{{$page->id}}"  aria-haspopup="true" aria-expanded="false" class="section-header-below-{{$page->id}} @if ($page->countPosts() > 0) dropdown-toggle @endif" @if ($page->countPosts() > 0) onclick="newTab('{{route('page.detail', $strSlug)}}')" data-toggle="dropdown" @endif>{{ $strTitle }}</a>
+                @if ($page->countPosts() > 0)
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton-{{$page->id}}">
+                    @foreach ($page->posts()->get(['title']) as $post)
+                        <a class="dropdown-item" href="{{route('berita.detail', str()->slug($post->title))}}">{{str()->title($post->title)}}</a>
+                    @endforeach
+                </div>
+                @endif
+                @endforeach
+
             </div>
-  
-            <div class="anak-education">
-              <div class="semua-anak">
-                <a href="#" class="anak">
-                  <h3>Peraturan Sekolah</h3>
-                  <p>Peraturan sekolah Di SMK wikrama Bogor</p>
-                </a>
-  
-                <a href="#" class="anak">
-                  <h3>Rencana Strategi & Prestasi</h3>
-                  <p>Rencama strategi dan prestasi di SMK Wikrama Bogor</p>
-                </a>
-  
-                <a href="#" class="anak" >
-                <h3>Rencana Strategi & Prestasi</h3>
-                <p>Rencama strategi dan prestasi di SMK Wikrama Bogor</p>
-                </a>
-  
-                <a href="#" class="anak">
-                <h3>Rencana Strategi & Prestasi</h3>
-                <p>Rencama strategi dan prestasi di SMK Wikrama Bogor</p>
-                </a>
-  
-                <a href="#" class="anak">
-                <h3>Rencana Strategi & Prestasi</h3>
-                <p>Rencama strategi dan prestasi di SMK Wikrama Bogor</p>
-                </a>      
-  
-                <a href="#" class="anak">
-                <h3>Rencana Strategi & Prestasi</h3>
-                <p>Rencama strategi dan prestasi di SMK Wikrama Bogor</p>
-                </a>
-        
-                <a href="#" class="anak">
-                <h3>Rencana Strategi & Prestasi</h3>
-                <p>Rencama strategi dan prestasi di SMK Wikrama Bogor</p>
-                </a>
-              </div>
-            </div>
-  
-            <div class="anak-cultures">
-              <div class="semua-anak">
-                <a href="#" class="anak">
-                  <h3>Peraturan Sekolah</h3>
-                  <p>Peraturan sekolah Di SMK wikrama Bogor</p>
-                </a>
-  
-                <a href="#" class="anak">
-                  <h3>Rencana Strategi & Prestasi</h3>
-                  <p>Rencama strategi dan prestasi di SMK Wikrama Bogor</p>
-                </a>
-  
-                <a href="#" class="anak" >
-                <h3>Rencana Strategi & Prestasi</h3>
-                <p>Rencama strategi dan prestasi di SMK Wikrama Bogor</p>
-                </a>
-  
-                <a href="#" class="anak">
-                <h3>Rencana Strategi & Prestasi</h3>
-                <p>Rencama strategi dan prestasi di SMK Wikrama Bogor</p>
-                </a>
-  
-                <a href="#" class="anak">
-                <h3>Rencana Strategi & Prestasi</h3>
-                <p>Rencama strategi dan prestasi di SMK Wikrama Bogor</p>
-                </a>      
-  
-                <a href="#" class="anak">
-                <h3>Rencana Strategi & Prestasi</h3>
-                <p>Rencama strategi dan prestasi di SMK Wikrama Bogor</p>
-                </a>
-        
-                <a href="#" class="anak">
-                <h3>Rencana Strategi & Prestasi</h3>
-                <p>Rencama strategi dan prestasi di SMK Wikrama Bogor</p>
-                </a>
-              </div>
-            </div>
-  
-            <div class="anak-campus">
-              <div class="semua-anak">
-                <a href="#" class="anak">
-                  <h3>Peraturan Sekolah</h3>
-                  <p>Peraturan sekolah Di SMK wikrama Bogor</p>
-                </a>
-  
-                <a href="#" class="anak">
-                  <h3>Rencana Strategi & Prestasi</h3>
-                  <p>Rencama strategi dan prestasi di SMK Wikrama Bogor</p>
-                </a>
-  
-                <a href="#" class="anak" >
-                <h3>Rencana Strategi & Prestasi</h3>
-                <p>Rencama strategi dan prestasi di SMK Wikrama Bogor</p>
-                </a>
-  
-                <a href="#" class="anak">
-                <h3>Rencana Strategi & Prestasi</h3>
-                <p>Rencama strategi dan prestasi di SMK Wikrama Bogor</p>
-                </a>
-  
-                <a href="#" class="anak">
-                <h3>Rencana Strategi & Prestasi</h3>
-                <p>Rencama strategi dan prestasi di SMK Wikrama Bogor</p>
-                </a>      
-  
-                <a href="#" class="anak">
-                <h3>Rencana Strategi & Prestasi</h3>
-                <p>Rencama strategi dan prestasi di SMK Wikrama Bogor</p>
-                </a>
-        
-                <a href="#" class="anak">
-                <h3>Rencana Strategi & Prestasi</h3>
-                <p>Rencama strategi dan prestasi di SMK Wikrama Bogor</p>
-                </a>
-              </div>
-            </div>
-  
-          </div>
-          </div>
-      </div>
-      </header>
+        </div>
+    </header>
 
     <!-- Homepage -->
     <div class="menu-section-slide">
@@ -454,8 +214,13 @@
       </div>
     </footer>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     @yield('script') 
     <script>
+        function newTab(url) {
+            window.location.href = url
+        }
         $(document).ready(() => {
             $('#post-message-btn').on('click', function(){
                 event.preventDefault();
@@ -501,6 +266,12 @@
                 $('textarea[name="pesan"]').val('');
     
                 return false;
+            })
+        })
+        // dropdown-toggle on hover
+        $(document).ready(() => {
+            $('.dropdown-toggle').on('mouseenter', function(){
+                $(this).dropdown('toggle');
             })
         })
     </script>

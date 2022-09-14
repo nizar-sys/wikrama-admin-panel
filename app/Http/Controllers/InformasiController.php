@@ -37,9 +37,11 @@ class InformasiController extends Controller
      */
     public function store(RequestStoreOrUpdateInformasi $request)
     {
+        $lastOrder = Informasi::lastOrder();
         $validated = $request->validated() + [
             'created_by' => Auth::id(),
-            'created_at' => now()
+            'created_at' => now(),
+            'seq' => $lastOrder + 1,
         ];
 
 
@@ -49,7 +51,7 @@ class InformasiController extends Controller
         $validated['media'] = $fileName;
 
         $newInformasi = Informasi::create($validated);
-        
+
         return redirect(route('informasis.index'))->with('success', 'Informasi berhasil ditambahkan');
     }
 
@@ -73,7 +75,7 @@ class InformasiController extends Controller
     public function edit($id)
     {
         $informasi = Informasi::findOrFail($id);
-        
+
         return view('dashboard.informasis.edit', compact('informasi'));
     }
 
@@ -94,7 +96,7 @@ class InformasiController extends Controller
         $informasi = Informasi::findOrFail($id);
 
         $validated['media'] = $informasi->media;
-        if($request->hasFile('media')){
+        if ($request->hasFile('media')) {
             $fileName = time() . '-informasi.' . $request->file('media')->getClientOriginalExtension();
             $request->file('media')->move(public_path('uploads/images/'), $fileName);
             $validated['media'] = $fileName;

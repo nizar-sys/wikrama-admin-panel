@@ -30,4 +30,14 @@ class Post extends Model
     {
         return $query->where('status', 1);
     }
+
+    public function page()
+    {
+        return $this->belongsTo(Page::class, 'page_id', 'id');
+    }
+
+    public function scopeLastOrder($query)
+    {
+        return $query->orderBy('seq')->get('seq')->last()->seq ?? 0;
+    }
 }

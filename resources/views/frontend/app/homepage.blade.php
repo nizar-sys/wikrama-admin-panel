@@ -111,16 +111,6 @@
   </div>
 @endsection
 
-
-@section('script')
-    <script>
-        function NewTab(url) {
-            window.open(url, "");
-        }
-    </script>
-@endsection
-
-
 @section('galeri')
 <div id="gallery-wk" class="judul-homepage">
   <h3>Gallery</h3>

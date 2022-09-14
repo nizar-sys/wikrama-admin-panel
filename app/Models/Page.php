@@ -19,5 +19,27 @@ class Page extends Model
         'seo_desc',
         'status',
     ];
+
+    // scope active
+    public function scopeActive($query)
+    {
+        return $query->where('status', 1);
+    }
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class, 'page_id', 'id');
+    }
+
+    // scope count posts
+    public function scopeCountPosts($query)
+    {
+        return $this->posts()->count();
+    }
+
+    public function scopeLastOrder($query)
+    {
+        return $query->orderBy('seq')->get('seq')->last()->seq ?? 0;
+    }
     
 }

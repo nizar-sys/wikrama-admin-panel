@@ -29,6 +29,7 @@ use App\Http\Controllers\SliderController;
 
 # ------ Unauthenticated routes ------ #
 Route::get('/', [FrontEndController::class, 'landingPage']);
+Route::get('/detail/{page}', [FrontEndController::class, 'pageDetail'])->name('page.detail');
 Route::get('/berita/{judul}', [FrontEndController::class, 'beritaDetail'])->name('berita.detail');
 Route::post('/send-message', [MessageController::class, 'store'])->name('send.message');
 

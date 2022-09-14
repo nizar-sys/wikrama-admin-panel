@@ -28,7 +28,6 @@ class RequestStoreOrUpdatePosts extends FormRequest
             'title' => 'required|max:255',
             'content' => 'required',
             'media' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'seq' => 'required|integer',
             'status' => 'required|integer'
         ];
 
@@ -46,7 +45,6 @@ class RequestStoreOrUpdatePosts extends FormRequest
             'title' => 'Title',
             'content' => 'Content',
             'media' => 'Media',
-            'seq' => 'Sequence',
             'status' => 'Status'
         ];
     }

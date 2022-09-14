@@ -99,30 +99,6 @@
                 }
             },
             {
-                extend: 'pdfHtml5',
-                title: 'Data Informasi Lainnya',
-                text: '<i class="fas fa-file-pdf"></i> PDF',
-                className: 'btn btn-sm btn-danger',
-                exportOptions: {
-                    columns: [0, 1, 2, 3, 4, 5]
-                },
-                // set alignment option
-                customize: function (doc) {
-                    // import img from data base64
-                    var img = $('.img-thumb').map(function() {
-                        return this.src;
-                    }).get();
-
-                    for (var i = 0, c = 1; i < img.length; i++, c++) {
-                            doc.content[1].table.body[c][2] = {
-                                image: img[i],
-                                width: 120,
-                                height: 70
-                            }
-                        }
-                }
-            },
-            {
                 title: 'Reload',
                 text: '<i class="fas fa-sync-alt"></i> Reload',
                 className: 'btn btn-sm btn-info',

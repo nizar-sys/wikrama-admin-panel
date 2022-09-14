@@ -20,25 +20,13 @@
                         @csrf
                         @method('PUT')
                         <div class="row">
-                            <div class="col-6">
+                            <div class="col-12">
                                 <div class="form-group mb-3">
                                     <label for="title">Judul</label>
                                     <input type="text" class="form-control @error('title') is-invalid @enderror" id="title"
                                         placeholder="Judul Informasi" value="{{ $informasi->title }}" name="title">
 
                                     @error('title')
-                                        <div class="d-block invalid-feedback">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="form-group mb-3">
-                                    <label for="seq">Order</label>
-                                    <input type="number" class="form-control @error('seq') is-invalid @enderror"
-                                        id="seq" placeholder="Order Informasi" value="{{ $informasi->seq }}"
-                                        name="seq">
-
-                                    @error('seq')
                                         <div class="d-block invalid-feedback">{{ $message }}</div>
                                     @enderror
                                 </div>

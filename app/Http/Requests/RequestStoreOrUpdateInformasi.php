@@ -26,7 +26,6 @@ class RequestStoreOrUpdateInformasi extends FormRequest
         $rules = [
             'title' => 'required|max:255',
             'media' => 'image|mimes:jpeg,png,jpg,gif,svg|max:20348',
-            'seq' => 'required|integer',
             'status' => 'required|integer',
         ];
 
@@ -46,8 +45,6 @@ class RequestStoreOrUpdateInformasi extends FormRequest
             'media.image' => 'Media informasi harus berupa gambar',
             'media.mimes' => 'Media informasi harus berupa gambar',
             'media.max' => 'Media informasi maksimal 20MB',
-            'seq.required' => 'Sequence harus diisi',
-            'seq.integer' => 'Sequence harus berupa angka',
             'status.required' => 'Status harus diisi',
             'status.integer' => 'Status harus berupa angka',
         ];

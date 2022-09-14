@@ -98,34 +98,6 @@
                 }
             },
             {
-                extend: 'pdfHtml5',
-                title: 'Data Users',
-                text: '<i class="fas fa-file-pdf"></i> PDF',
-                className: 'btn btn-sm btn-danger',
-                exportOptions: {
-                    columns: [1, 2, 3, 4]
-                },
-                // set alignment option
-                customize: function (doc) {
-                    doc.defaultStyle.alignment = 'center';
-                    doc.styles.tableHeader.alignment = 'center';
-                    doc.content[1].table.widths = ['*', '*', '*', '*', '*'];
-
-                    // import img from data base64
-                    var img = $('.img-avatar').map(function() {
-                        return this.src;
-                    }).get();
-
-                    for (var i = 0, c = 1; i < img.length; i++, c++) {
-                            doc.content[1].table.body[c][3] = {
-                                image: img[i],
-                                width: 50,
-                                height: 50
-                            }
-                        }
-                }
-            },
-            {
                 title: 'Reload',
                 text: '<i class="fas fa-sync-alt"></i> Reload',
                 className: 'btn btn-sm btn-info',

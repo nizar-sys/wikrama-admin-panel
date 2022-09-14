@@ -37,9 +37,12 @@ class PageController extends Controller
      */
     public function store(RequestStoreOrUpdatePage $request)
     {
+        $lastOrder = Page::lastOrder();
+        
         $validated = $request->validated() + [
             'created_by' => Auth::id(),
-            'created_at' => now()
+            'created_at' => now(),
+            'seq' => $lastOrder + 1,
         ];
 
         // upload media

@@ -170,6 +170,11 @@ header {
     border-bottom: solid 2px #FFE603;
 }
 
+.header-below a:first-child {
+    opacity: 1;
+    border-bottom: solid 2px #FFE603;
+}
+
 #section-header-below-discovery.active-head-discovery {
     border-bottom: solid 2px #FFE603;
     opacity: 1;
@@ -191,6 +196,16 @@ header {
 }
 
 #section-header-below-campus.active-head-campus {
+    border-bottom: solid 2px #FFE603;
+    opacity: 1;
+}
+
+#section-header-below-bkk.active-head-bkk {
+    border-bottom: solid 2px #FFE603;
+    opacity: 1;
+}
+
+#section-header-below-berita.active-berita {
     border-bottom: solid 2px #FFE603;
     opacity: 1;
 }
@@ -254,14 +269,37 @@ header {
     display: block;
 }
 
+.anak-bkk {
+    display: none;
+    position: absolute;
+    z-index: 4;
+    transform: translate(6%,0);
+}
+
+.anak-bkk.active-bkk {
+    display: block;
+}
+
+.anak-berita {
+    display: none;
+    position: absolute;
+    z-index: 4;
+    transform: translate(13%,0);
+}
+
+.anak-berita.active-berita {
+    display: block;
+}
+
 .semua-anak {
     background-color: white;
     width: 70rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 15px 10px;
-    border-bottom: solid 2px #001E42;
+    padding: 15px 10px 35px 10px;
+    border: solid 2px #001E42;
+    border-radius: 5px;
 }
 
 .semua-anak .anak {
@@ -270,6 +308,7 @@ header {
     margin: 0 20px;
     background-color: white;
     cursor: pointer;
+    border-bottom: solid 2px #dbdbdb;
 }
 
 
@@ -280,12 +319,13 @@ header {
 .semua-anak .anak h3 {
     color: #3a3a3a;
     font-weight: 600;
-    font-size: 17px;
+    font-size: 16px;
+    margin-bottom: 3px;
 }
 
 .semua-anak .anak p {
     color: #3a3a3a;
-    font-size: 15px;
+    font-size: 14px;
     margin: 0;
     padding: 0;
 }

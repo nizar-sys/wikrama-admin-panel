@@ -19,4 +19,9 @@ class Informasi extends Model
     {
         return $this->belongsTo(User::class, 'updated_by', 'id');
     }
+
+    public function scopeLastOrder($query)
+    {
+        return $query->orderBy('seq')->get('seq')->last()->seq ?? 0;
+    }
 }

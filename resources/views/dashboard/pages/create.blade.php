@@ -56,7 +56,7 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-6">
                                 <div class="form-group mb-3">
                                     <label for="status">Status</label>
                                     <select class="form-control @error('status') is-invalid @enderror" id="status" name="status">
@@ -75,18 +75,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="col-4">
-                                <div class="form-group mb-3">
-                                    <label for="seq">Order</label>
-                                    <input type="number" class="form-control @error('seq') is-invalid @enderror" id="seq"
-                                        placeholder="Order Pages" value="{{ old('seq') }}" name="seq">
-
-                                    @error('seq')
-                                        <div class="d-block invalid-feedback">{{ $message }}</div>
-                                    @enderror
-                                </div>
-                            </div>
-                            <div class="col-4">
+                            <div class="col-6">
                                 <div class="form-group mb-3">
                                     <label for="seo_key">SEO Key</label>
                                     <input type="text" class="form-control @error('seo_key') is-invalid @enderror" id="seo_key"
