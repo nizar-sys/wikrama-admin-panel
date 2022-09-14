@@ -77,8 +77,7 @@
             <div class="header-below">
                 <a href="" id="section-header-below-home" class="section-header-below">Home</a>
                 <a href="" id="section-header-below-discovery" class="section-header-below">Discover Wikrama</a>
-                <a href="" id="section-header-below-major-competency" class="section-header-below">Major
-                    Competency</a>
+                <a href="" id="section-header-below-major-competency" class="section-header-below">Major Competency</a>
                 <a href="" id="section-header-below-education" class="section-header-below">Education Process</a>
                 <a href="" id="section-header-below-cultures" class="section-header-below">Cultures</a>
                 <a href="" id="section-header-below-campus" class="section-header-below">Campus Resources</a>
