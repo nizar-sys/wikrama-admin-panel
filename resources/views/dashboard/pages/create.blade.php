@@ -45,7 +45,7 @@
                             <div class="col-4">
                                 <div class="form-group mb-3">
                                     <label for="link">Link</label>
-                                    <input type="url" class="form-control @error('link') is-invalid @enderror" id="link"
+                                    <input type="text" class="form-control @error('link') is-invalid @enderror" id="link"
                                         placeholder="Link Pages" value="{{ old('link') }}" name="link">
 
                                     @error('link')

@@ -17,194 +17,194 @@ const home = $("#section-header-below-home");
 $(document).ready(() => {
     // discover
     discover_wikrama.hover(() => {
-        anakDiscovery.addClass("active-discovery");
-        discover_wikrama.addClass("active-head-discovery");
+        anakDiscovery.addClass("active-dropdown");
+        discover_wikrama.addClass("active-head-menu");
     });
     anakDiscovery.on("mouseleave", () => {
-        anakDiscovery.removeClass("active-discovery");
-        discover_wikrama.removeClass("active-head-discovery");
+        anakDiscovery.removeClass("active-dropdown");
+        discover_wikrama.removeClass("active-head-menu");
     });
 
     // major
     major.on("mouseenter", () => {
-        anakMajor.addClass("active-major");
-        major.addClass("active-head-major");
+        anakMajor.addClass("active-dropdown");
+        major.addClass("active-head-menu");
     });
     anakMajor.on("mouseleave", () => {
-        anakMajor.removeClass("active-major");
-        major.removeClass("active-head-major");
+        anakMajor.removeClass("active-dropdown");
+        major.removeClass("active-head-menu");
     });
 
     // education_process
     education_process.on("mouseenter", () => {
-        anakEducation.addClass("active-education");
-        education_process.addClass("active-head-education");
+        anakEducation.addClass("active-dropdown");
+        education_process.addClass("active-head-menu");
     });
     anakEducation.on("mouseleave", () => {
-        anakEducation.removeClass("active-education");
-        education_process.removeClass("active-head-education");
+        anakEducation.removeClass("active-dropdown");
+        education_process.removeClass("active-head-menu");
     });
 
     // cultures
     cultures.on("mouseenter", () => {
-        anakCultures.addClass("active-cultures");
-        cultures.addClass("active-head-cultures");
+        anakCultures.addClass("active-dropdown");
+        cultures.addClass("active-head-menu");
     });
     anakCultures.on("mouseleave", () => {
-        anakCultures.removeClass("active-cultures");
-        cultures.removeClass("active-head-cultures");
+        anakCultures.removeClass("active-dropdown");
+        cultures.removeClass("active-head-menu");
     });
 
     // campus
     campus.on("mouseenter", () => {
-        anakCampus.addClass("active-campus");
-        campus.addClass("active-head-campus");
+        anakCampus.addClass("active-dropdown");
+        campus.addClass("active-head-menu");
     });
     anakCampus.on("mouseleave", () => {
-        anakCampus.removeClass("active-campus");
-        campus.removeClass("active-head-campus");
+        anakCampus.removeClass("active-dropdown");
+        campus.removeClass("active-head-menu");
     });
 
     // bkk
     bkk.on("mouseenter", () => {
-        anakBkk.addClass("active-bkk");
-        bkk.addClass("active-head-bkk");
+        anakBkk.addClass("active-dropdown");
+        bkk.addClass("active-head-menu");
     });
     anakBkk.on("mouseleave", () => {
-        anakBkk.removeClass("active-bkk");
-        bkk.removeClass("active-head-bkk");
+        anakBkk.removeClass("active-dropdown");
+        bkk.removeClass("active-head-menu");
     });
 
     // berita
     berita.on("mouseenter", () => {
-        anakBerita.addClass("active-berita");
-        berita.addClass("active-head-berita");
+        anakBerita.addClass("active-dropdown");
+        berita.addClass("active-head-menu");
     });
     anakBerita.on("mouseleave", () => {
-        anakBerita.removeClass("active-berita");
-        berita.removeClass("active-head-berita");
+        anakBerita.removeClass("active-dropdown");
+        berita.removeClass("active-head-menu");
     });
 
     // fix bug
     home.on("mouseenter", () => {
-        anakBerita.removeClass("active-berita");
-        berita.removeClass("active-head-berita");
-        anakBkk.removeClass("active-bkk");
-        bkk.removeClass("active-head-bkk");
-        anakCampus.removeClass("active-campus");
-        campus.removeClass("active-head-campus");
-        anakCultures.removeClass("active-cultures");
-        cultures.removeClass("active-head-cultures");
-        anakEducation.removeClass("active-education");
-        education_process.removeClass("active-head-education");
-        anakMajor.removeClass("active-major");
-        major.removeClass("active-head-major");
-        anakDiscovery.removeClass("active-discovery");
-        discover_wikrama.removeClass("active-head-discovery");
+        anakBerita.removeClass("active-dropdown");
+        berita.removeClass("active-head-menu");
+        anakBkk.removeClass("active-dropdown");
+        bkk.removeClass("active-head-menu");
+        anakCampus.removeClass("active-dropdown");
+        campus.removeClass("active-head-menu");
+        anakCultures.removeClass("active-dropdown");
+        cultures.removeClass("active-head-menu");
+        anakEducation.removeClass("active-dropdown");
+        education_process.removeClass("active-head-menu");
+        anakMajor.removeClass("active-dropdown");
+        major.removeClass("active-head-menu");
+        anakDiscovery.removeClass("active-dropdown");
+        discover_wikrama.removeClass("active-head-menu");
     });
 
     discover_wikrama.on("mouseenter", () => {
-        anakBerita.removeClass("active-berita");
-        berita.removeClass("active-head-berita");
-        anakBkk.removeClass("active-bkk");
-        bkk.removeClass("active-head-bkk");
-        anakCampus.removeClass("active-campus");
-        campus.removeClass("active-head-campus");
-        anakCultures.removeClass("active-cultures");
-        cultures.removeClass("active-head-cultures");
-        anakEducation.removeClass("active-education");
-        education_process.removeClass("active-head-education");
-        anakMajor.removeClass("active-major");
-        major.removeClass("active-head-major");
+        anakBerita.removeClass("active-dropdown");
+        berita.removeClass("active-head-menu");
+        anakBkk.removeClass("active-dropdown");
+        bkk.removeClass("active-head-menu");
+        anakCampus.removeClass("active-dropdown");
+        campus.removeClass("active-head-menu");
+        anakCultures.removeClass("active-dropdown");
+        cultures.removeClass("active-head-menu");
+        anakEducation.removeClass("active-dropdown");
+        education_process.removeClass("active-head-menu");
+        anakMajor.removeClass("active-dropdown");
+        major.removeClass("active-head-menu");
     });
 
     major.on("mouseenter", () => {
-        anakBerita.removeClass("active-berita");
-        berita.removeClass("active-head-berita");
-        anakBkk.removeClass("active-bkk");
-        bkk.removeClass("active-head-bkk");
-        anakCampus.removeClass("active-campus");
-        campus.removeClass("active-head-campus");
-        anakCultures.removeClass("active-cultures");
-        cultures.removeClass("active-head-cultures");
-        anakEducation.removeClass("active-education");
-        education_process.removeClass("active-head-education");
-        anakDiscovery.removeClass("active-discovery");
-        discover_wikrama.removeClass("active-head-discovery");
+        anakBerita.removeClass("active-dropdown");
+        berita.removeClass("active-head-menu");
+        anakBkk.removeClass("active-dropdown");
+        bkk.removeClass("active-head-menu");
+        anakCampus.removeClass("active-dropdown");
+        campus.removeClass("active-head-menu");
+        anakCultures.removeClass("active-dropdown");
+        cultures.removeClass("active-head-menu");
+        anakEducation.removeClass("active-dropdown");
+        education_process.removeClass("active-head-menu");
+        anakDiscovery.removeClass("active-dropdown");
+        discover_wikrama.removeClass("active-head-menu");
     });
 
     education_process.on("mouseenter", () => {
-        anakBerita.removeClass("active-berita");
-        berita.removeClass("active-head-berita");
-        anakBkk.removeClass("active-bkk");
-        bkk.removeClass("active-head-bkk");
-        anakCampus.removeClass("active-campus");
-        campus.removeClass("active-head-campus");
-        anakCultures.removeClass("active-cultures");
-        cultures.removeClass("active-head-cultures");
-        anakMajor.removeClass("active-major");
-        major.removeClass("active-head-major");
-        anakDiscovery.removeClass("active-discovery");
-        discover_wikrama.removeClass("active-head-discovery");
+        anakBerita.removeClass("active-dropdown");
+        berita.removeClass("active-head-menu");
+        anakBkk.removeClass("active-dropdown");
+        bkk.removeClass("active-head-menu");
+        anakCampus.removeClass("active-dropdown");
+        campus.removeClass("active-head-menu");
+        anakCultures.removeClass("active-dropdown");
+        cultures.removeClass("active-head-menu");
+        anakMajor.removeClass("active-dropdown");
+        major.removeClass("active-head-menu");
+        anakDiscovery.removeClass("active-dropdown");
+        discover_wikrama.removeClass("active-head-menu");
     });
 
     cultures.on("mouseenter", () => {
-        anakBerita.removeClass("active-berita");
-        berita.removeClass("active-head-berita");
-        anakBkk.removeClass("active-bkk");
-        bkk.removeClass("active-head-bkk");
-        anakCampus.removeClass("active-campus");
-        campus.removeClass("active-head-campus");
-        anakEducation.removeClass("active-education");
-        education_process.removeClass("active-head-education");
-        anakMajor.removeClass("active-major");
-        major.removeClass("active-head-major");
-        anakDiscovery.removeClass("active-discovery");
-        discover_wikrama.removeClass("active-head-discovery");
+        anakBerita.removeClass("active-dropdown");
+        berita.removeClass("active-head-menu");
+        anakBkk.removeClass("active-dropdown");
+        bkk.removeClass("active-head-menu");
+        anakCampus.removeClass("active-dropdown");
+        campus.removeClass("active-head-menu");
+        anakEducation.removeClass("active-dropdown");
+        education_process.removeClass("active-head-menu");
+        anakMajor.removeClass("active-dropdown");
+        major.removeClass("active-head-menu");
+        anakDiscovery.removeClass("active-dropdown");
+        discover_wikrama.removeClass("active-head-menu");
     });
 
     campus.on("mouseenter", () => {
-        anakBerita.removeClass("active-berita");
-        berita.removeClass("active-head-berita");
-        anakBkk.removeClass("active-bkk");
-        bkk.removeClass("active-head-bkk");
-        anakCultures.removeClass("active-cultures");
-        cultures.removeClass("active-head-cultures");
-        anakEducation.removeClass("active-education");
-        education_process.removeClass("active-head-education");
-        anakMajor.removeClass("active-major");
-        major.removeClass("active-head-major");
-        anakDiscovery.removeClass("active-discovery");
-        discover_wikrama.removeClass("active-head-discovery");
+        anakBerita.removeClass("active-dropdown");
+        berita.removeClass("active-head-menu");
+        anakBkk.removeClass("active-dropdown");
+        bkk.removeClass("active-head-menu");
+        anakCultures.removeClass("active-dropdown");
+        cultures.removeClass("active-head-menu");
+        anakEducation.removeClass("active-dropdown");
+        education_process.removeClass("active-head-menu");
+        anakMajor.removeClass("active-dropdown");
+        major.removeClass("active-head-menu");
+        anakDiscovery.removeClass("active-dropdown");
+        discover_wikrama.removeClass("active-head-menu");
     });
 
     bkk.on("mouseenter", () => {
-        anakBerita.removeClass("active-berita");
-        berita.removeClass("active-head-berita");
-        anakCampus.removeClass("active-campus");
-        campus.removeClass("active-head-campus");
-        anakCultures.removeClass("active-cultures");
-        cultures.removeClass("active-head-cultures");
-        anakEducation.removeClass("active-education");
-        education_process.removeClass("active-head-education");
-        anakMajor.removeClass("active-major");
-        major.removeClass("active-head-major");
-        anakDiscovery.removeClass("active-discovery");
-        discover_wikrama.removeClass("active-head-discovery");
+        anakBerita.removeClass("active-dropdown");
+        berita.removeClass("active-head-menu");
+        anakCampus.removeClass("active-dropdown");
+        campus.removeClass("active-head-menu");
+        anakCultures.removeClass("active-dropdown");
+        cultures.removeClass("active-head-menu");
+        anakEducation.removeClass("active-dropdown");
+        education_process.removeClass("active-head-menu");
+        anakMajor.removeClass("active-dropdown");
+        major.removeClass("active-head-menu");
+        anakDiscovery.removeClass("active-dropdown");
+        discover_wikrama.removeClass("active-head-menu");
     });
 
     berita.on("mouseenter", () => {
-        anakBkk.removeClass("active-bkk");
-        bkk.removeClass("active-head-bkk");
-        anakCampus.removeClass("active-campus");
-        campus.removeClass("active-head-campus");
-        anakCultures.removeClass("active-cultures");
-        cultures.removeClass("active-head-cultures");
-        anakEducation.removeClass("active-education");
-        education_process.removeClass("active-head-education");
-        anakMajor.removeClass("active-major");
-        major.removeClass("active-head-major");
-        anakDiscovery.removeClass("active-discovery");
-        discover_wikrama.removeClass("active-head-discovery");
+        anakBkk.removeClass("active-dropdown");
+        bkk.removeClass("active-head-menu");
+        anakCampus.removeClass("active-dropdown");
+        campus.removeClass("active-head-menu");
+        anakCultures.removeClass("active-dropdown");
+        cultures.removeClass("active-head-menu");
+        anakEducation.removeClass("active-dropdown");
+        education_process.removeClass("active-head-menu");
+        anakMajor.removeClass("active-dropdown");
+        major.removeClass("active-head-menu");
+        anakDiscovery.removeClass("active-dropdown");
+        discover_wikrama.removeClass("active-head-menu");
     });
 });

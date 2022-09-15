@@ -170,11 +170,6 @@ header {
     border-bottom: solid 2px #FFE603;
 }
 
-.header-below a:first-child {
-    opacity: 1;
-    border-bottom: solid 2px #FFE603;
-}
-
 #section-header-below-discovery.active-head-discovery {
     border-bottom: solid 2px #FFE603;
     opacity: 1;
@@ -353,3 +348,19 @@ header {
 }
 
 /* HomePage */
+
+.active-dropdown {
+    display: block !important;
+}
+
+.active-head-menu {
+    border-bottom: solid 2px #FFE603 !important;
+    opacity: 1 !important;
+}
+
+.child-dropdown {
+    display: none;
+    position: absolute !important;
+    z-index: 4 !important;
+    transform: translate(7%, 0) !important;
+}

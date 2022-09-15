@@ -5,13 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Wikrama Bogor</title>
 
     <!-- bagian import -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="icon" href="{{ asset('/frontend') }}/assets/wikrama-logo.png" />
     <link rel="stylesheet" type="text/css" href="{{ asset('/frontend') }}/css/header.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ asset('/frontend') }}/css/homepage.css">
+    <link rel="stylesheet" href="{{ asset('/frontend') }}/css/loading.css">
 
 
 
@@ -30,7 +35,8 @@
 <!-- header css nya satu  -->
 <header>
     <div class="header-wrap-texture">
-        <img class="header-texture" src="{{ asset('/frontend') }}/assets/header-texture.png" height="unset" width="unset" alt="Texture">
+        <img class="header-texture" src="{{ asset('/frontend') }}/assets/header-texture.png" height="unset"
+            width="unset" alt="Texture">
         <div class="header">
             <div id="hamburger-icon-responsive">
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -53,7 +59,8 @@
                     <div id="indicator-section" class="indicator-section-three"></div>
                 </div>
                 <div class="wikrama-logo">
-                    <img src="{{ asset('/frontend') }}/assets/wikrama-logo.png" height="unset" width="unset" alt="Logo Wikrama">
+                    <img src="{{ asset('/frontend') }}/assets/wikrama-logo.png" height="unset" width="unset"
+                        alt="Logo Wikrama">
                     <h3>SMK WIKRAMA BOGOR</h3>
                 </div>
             </div>
@@ -74,260 +81,17 @@
             </div>
         </div>
         <div class="anak-header-dan-headernya">
-            <div class="header-below">
-                <a href="" id="section-header-below-home" class="section-header-below">Home</a>
-                <a href="" id="section-header-below-discovery" class="section-header-below">Discover Wikrama</a>
-                <a href="" id="section-header-below-major-competency" class="section-header-below">Major Competency</a>
-                <a href="" id="section-header-below-education" class="section-header-below">Education Process</a>
-                <a href="" id="section-header-below-cultures" class="section-header-below">Cultures</a>
-                <a href="" id="section-header-below-campus" class="section-header-below">Campus Resources</a>
-                <a href="" id="section-header-below-bkk" class="section-header-below">BKK dan Alumni</a>
-                <a href="" id="section-header-below-berita" class="section-header-below">Berita</a>
+            <div class="header-below" id="header-menus">
+                <a href="" class="section-header-below active-head-menu">Home</a>
             </div>
-            <div class="child-header-below">
-                <div class="anak-discovery">
-                    <div class="semua-anak">
-                        <a href="#" class="anak">
-                            <h3>Peraturan Sekolah</h3>
-                            <p>Peraturan sekolah Di SMK wikrama Bogor</p>
-                        </a>
 
-                        <a href="#" class="anak">
-                            <h3>Rencana Strategi & Prestasi</h3>
-                            <p>Rencana strategi dan prestasi di SMK Wikrama Bogor</p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>Yayasan</h3>
-                            <p>Yayasan Prawitama</p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>School Alliance</h3>
-                            <p>Jaringan SMK Wikrama di Indonesia</p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>Penghargaan</h3>
-                            <p>Penghargaan Sekolah</p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>Kerjasama</h3>
-                            <p>Kerjasama dengan DUDI</p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>Tertimonial</h3>
-                            <p>Tertimonial</p>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="anak-major">
-                    <div class="semua-anak">
-                        <a href="#" class="anak">
-                            <h3>Competence in General Performance</h3>
-                            <p>Competence in General Performance</p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>Otomatisasi dan Tata Kelola Perkantoran</h3>
-                            <p>Otomatisasi dan Tata Kelola Perkantoran</p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>Teknik Komputer dan Jaringan</h3>
-                            <p>Teknik Komputer dan Jaringan</p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>Rekayasa Perangkat Lunak</h3>
-                            <p>Rekayasa Perangkat Lunak</p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>Multimedia</h3>
-                            <p>Multimedia</p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>Bisnis Daring dan Pemasaran</h3>
-                            <p>Bisnis Daring dan Pemasaran</p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>Tata Boga</h3>
-                            <p>Tata Boga</p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>Perhotelan</h3>
-                            <p>Perhotelan</p>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="anak-education">
-                    <div class="semua-anak">
-                        <a href="#" class="anak">
-                            <h3>School Calendar</h3>
-                            <p>School Calendar</p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>Eduction Process</h3>
-                            <p>Proses Akademik di SMK Wikrama Bogor</p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>School Introduction</h3>
-                            <p>School Introduction</p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>Parentship</h3>
-                            <p>Parentship</p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>First Year</h3>
-                            <p>First Year : Learning to know & to be</p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>Second Year</h3>
-                            <p>Second Year : learning to do</p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>Third Year</h3>
-                            <p>Third Year : learning to life together</p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>Wrap up and Graduation</h3>
-                            <p>Wrap up and Graduation</p>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="anak-cultures">
-                    <div class="semua-anak">
-                        <a href="#" class="anak">
-                            <h3>Wikrama's Values</h3>
-                            <p>Wikrama's Values as basic of character building</p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>Wikrama's Way of Life</h3>
-                            <p>Wikrama's Way of Life</p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>Service Excellence</h3>
-                            <p>Service Excellence</p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>Teacher Leadership & Learning Community</h3>
-                            <p>Teacher Leadership & Learning Community</p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>Learning Management</h3>
-                            <p>Learning Management</p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>Student Leadership and Life Skill</h3>
-                            <p>Ekstrakulikuler</p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>Highlight and ESD Programs</h3>
-                            <p>Highlight and ESD Programs</p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>Beasiswa</h3>
-                            <p>Beasiswa</p>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="anak-campus">
-                    <div class="semua-anak">
-                        <a href="#" class="anak">
-                            <h3>Scholarship</h3>
-                            <p>Scholarship</p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>Supporting Academic Staff</h3>
-                            <p>Staff</p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>Library and Learning Resource</h3>
-                            <p>Library</p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>Building and School Facilities</h3>
-                            <p>school facilities</p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>Karya Guru</h3>
-                            <p></p>
-                        </a>
-
-                    </div>
-                </div>
-
-                <div class="anak-bkk">
-                    <div class="semua-anak">
-                        <a href="#" class="anak">
-                            <h3>Info Lowongan Kerja Alumni</h3>
-                            <p></p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>Tracer Study</h3>
-                            <p></p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>Data Keterserapan Alumni</h3>
-                            <p></p>
-                        </a>
-
-                    </div>
-                </div>
-
-                <div class="anak-berita">
-                    <div class="semua-anak">
-                        <a href="#" class="anak">
-                            <h3>Data Keterserapan Alumni</h3>
-                            <p></p>
-                        </a>
-
-                        <a href="#" class="anak">
-                            <h3>Selamat Tahun Baru Islam 1 Muharram 1442 Hijriyah</h3>
-                            <p></p>
-                        </a>
-
-
-                    </div>
-                </div>
-
-            </div>
+            <div class="child-header-below" id="child-header-menus"></div>
         </div>
     </div>
 </header>
 
 <body>
+    <div class="loading-content"></div>
 
     <!-- Homepage -->
     <div class="menu-section-slide">
@@ -358,40 +122,23 @@
                 </div>
             </div>
         </div>
-        <section class="carousel" aria-label="Gallery">
+        <section class="carousel" style="height: 60vh" aria-label="Gallery">
             <ol class="carousel__viewport">
                 <div class="gradient-slide"></div>
-                <li id="carousel__slide1" tabindex="0" class="carousel__slide">
-                    <img src="{{ asset('/frontend') }}/assets/lapangaan.png" height="unset" width="unset" alt="lapangan">
+                <li id="carousel__slide1" tabindex="0" class="carousel__slide h-100 w-100 img-fluid">
+                    <img src="{{ asset('/frontend') }}/assets/lapangaan.png" alt="lapangan">
                     <div class="carousel__snapper">
                     </div>
                 </li>
-                <li id="carousel__slide2" tabindex="0" class="carousel__slide">
-                    <img src="{{ asset('/frontend') }}/assets/gedung-wikrama.png" height="unset" width="unset" alt="Gedung Wikrama">
+                <li id="carousel__slide2" tabindex="0" class="carousel__slide h-100 w-100 img-fluid">
+                    <img src="{{ asset('/frontend') }}/assets/gedung-wikrama.png" alt="Gedung Wikrama">
                     <div class="carousel__snapper"></div>
                 </li>
-                <li id="carousel__slide3" tabindex="0" class="carousel__slide">
-                    <img src="{{ asset('/frontend') }}/assets/murid.png" height="unset" width="unset" alt="Murid Wikrama"
-                        class="img-murid">
+                <li id="carousel__slide3" tabindex="0" class="carousel__slide h-100 w-100 img-fluid">
+                    <img src="{{ asset('/frontend') }}/assets/murid.png" alt="Murid Wikrama" class="img-murid">
                     <div class="carousel__snapper"></div>
                 </li>
             </ol>
-            <!-- <aside class="carousel__navigation">
-              <ol class="carousel__navigation-list">
-                <li class="carousel__navigation-item">
-                  <a href="#carousel__slide1"
-                     class="carousel__navigation-button">Go to slide 1</a>
-                </li>
-                <li class="carousel__navigation-item">
-                  <a href="#carousel__slide2"
-                     class="carousel__navigation-button">Go to slide 2</a>
-                </li>
-                <li class="carousel__navigation-item">
-                  <a href="#carousel__slide3"
-                     class="carousel__navigation-button">Go to slide 3</a>
-                </li>
-              </ol> -->
-            </aside>
         </section>
     </div>
 
@@ -551,8 +298,8 @@
                     <h4>Wikrama</h4>
                     <p>e-Commnerce</p>
                 </div>
-                <img class="virtual-img" id="commenerce" height="unset" width="unset" src="{{ asset('/frontend') }}/assets/commerce.png"
-                    alt="commenerce">
+                <img class="virtual-img" id="commenerce" height="unset" width="unset"
+                    src="{{ asset('/frontend') }}/assets/commerce.png" alt="commenerce">
             </div>
 
             <div class="learning">
@@ -566,8 +313,8 @@
                     <h4>Wikrama</h4>
                     <p>e-Learning</p>
                 </div>
-                <img class="virtual-img" id="learning" height="unset" width="unset" src="{{ asset('/frontend') }}/assets/learning.png"
-                    alt="learning">
+                <img class="virtual-img" id="learning" height="unset" width="unset"
+                    src="{{ asset('/frontend') }}/assets/learning.png" alt="learning">
             </div>
 
             <div class="library">
@@ -581,8 +328,8 @@
                     <h4>Wikrama</h4>
                     <p>Digital Library</p>
                 </div>
-                <img class="virtual-img" id="learning" height="unset" width="unset" src="{{ asset('/frontend') }}/assets/library.png"
-                    alt="Library">
+                <img class="virtual-img" id="learning" height="unset" width="unset"
+                    src="{{ asset('/frontend') }}/assets/library.png" alt="Library">
             </div>
 
 
@@ -597,8 +344,8 @@
                     <h4>Wikrama</h4>
                     <p>Mini Movie</p>
                 </div>
-                <img class="virtual-img" id="learning" height="unset" width="unset" src="{{ asset('/frontend') }}/assets/lapangaan.png"
-                    alt="Library">
+                <img class="virtual-img" id="learning" height="unset" width="unset"
+                    src="{{ asset('/frontend') }}/assets/lapangaan.png" alt="Library">
             </div>
 
         </div>
@@ -612,7 +359,8 @@
     <div class="gallery">
         <div class="grid1">
             <div class="grid1-content1">
-                <img height="120%" width="auto" src="{{ asset('/frontend') }}/assets/grid1.png" alt="pak presiden">
+                <img height="120%" width="auto" src="{{ asset('/frontend') }}/assets/grid1.png"
+                    alt="pak presiden">
             </div>
             <div class="grid1-content2">
                 <p>Penghargaan dari Presiden RI Tahun 2012</p>
@@ -623,12 +371,14 @@
                 <p>Tamu dari Korea Selatan</p>
             </div>
             <div class="grid2-content2">
-                <img height="120%" width="unset" src="{{ asset('/frontend') }}/assets/grid2.png" alt="Kunjungan Korea">
+                <img height="120%" width="unset" src="{{ asset('/frontend') }}/assets/grid2.png"
+                    alt="Kunjungan Korea">
             </div>
         </div>
         <div class="grid3">
             <div class="grid3-content1">
-                <img height="120%" width="unset" src="{{ asset('/frontend') }}/assets/grid3.png" alt="Murid wikrama">
+                <img height="120%" width="unset" src="{{ asset('/frontend') }}/assets/grid3.png"
+                    alt="Murid wikrama">
             </div>
             <div class="grid3-content2">
                 <p>An Excellent Generation Start Here</p>
@@ -642,7 +392,6 @@
                 <img height="120%" width="unset" src="{{ asset('/frontend') }}/assets/grid4.png" alt="Walikota">
             </div>
         </div>
-    </div>
     </div>
 
     <div id="informasi-lain" class="judul-homepage">
@@ -710,12 +459,13 @@
             </label>
         </div>
     </div>
+
     <div class="isi-informasi">
         <div class="line-informasi"></div>
         <div class="isian-informasi">
             <div class="left-side">
-                <img id="img-isi-informasi" height="100%" width="auto" src="{{ asset('/frontend') }}/assets/lapangaan.png"
-                    alt="lapangan">
+                <img id="img-isi-informasi" height="100%" width="auto"
+                    src="{{ asset('/frontend') }}/assets/lapangaan.png" alt="lapangan">
             </div>
             <div class="right-side">
                 <h3>Pendaftaran Beasiswa</h3>
@@ -727,7 +477,6 @@
                 <button>button</button>
             </div>
         </div>
-    </div>
     </div>
 
     <div id="pesan" class="judul-homepage">
@@ -868,7 +617,96 @@
         </div>
     </footer>
 
-    <script src="{{ asset('/frontend') }}/js/uiSystem.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script>
+        function HitData(url, data = null, type = 'GET', ...args) {
+            return new Promise((resolve, reject) => {
+                $.ajaxSetup({
+                    headers: {
+                        "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+                    },
+                });
+                $.ajax({
+                    url: url,
+                    type: type,
+                    data: data,
+                    success: function(response) {
+                        resolve(response);
+                    },
+                    error: function(error) {
+                        reject(error);
+                    },
+                });
+            });
+        }
+
+        function loadingSkeleton() {
+            return `<div class="loading"></div>`;
+        }
+
+        function renderChildMenu(post) {
+            return `
+            <div class="child-dropdown child-menu-${post}" data-parent="${post}">
+                <div class="semua-anak child-menus">
+                    <a href="#" class="anak">
+                        <h3>Rencana Strategi & Prestasi</h3>
+                        <p>Rencana strategi dan prestasi di SMK Wikrama Bogor</p>
+                    </a>
+                </div>
+            </div>
+            `;
+        }
+
+        function renderHeaderMenu(menu) {
+            const {
+                slug_title,
+                title,
+                posts
+            } = menu;
+            $('#child-header-menus').append(renderChildMenu(slug_title));
+            // if (posts.length > 0) {
+            //     postsPage.map((post) => {
+            //     })
+            // }
+            return `<a href="${slug_title}" class="section-header-below menu-${slug_title}" data-target="${slug_title}">${title}</a>`;
+        }
+
+        async function getHeaderMenu() {
+            $('.loading-content').html(loadingSkeleton());
+            const menus = await HitData('/api/header-menu');
+            menus.map((menu) => {
+                $('#header-menus').append(renderHeaderMenu(menu));
+            })
+            $('.loading-content').html('');
+
+            $(`.section-header-below`).on('mouseenter', (e) => {
+                var childDropdown = $(e.target).data('target');
+                $(e.target).addClass('active-head-menu')
+                $(`.child-menu-${childDropdown}`).addClass('active-dropdown');
+            })
+
+            $('.child-menus').on('mouseleave', (e) => {
+                var parentDropdown = $(e.target).parent().data('parent');
+                $(e.target).parent().removeClass('active-dropdown');
+                $(`.menu-${parentDropdown}`).removeClass('active-head-menu')
+            })
+
+            $('.child-menus .anak').on('mouseleave', (e) => {
+                var parentDropdown = $(e.target).parent().parent().data('parent');
+                $(e.target).parent().parent().removeClass('active-dropdown');
+                $(`.menu-${parentDropdown}`).removeClass('active-head-menu')
+            })
+        }
+
+        $(document).ready(() => {
+            getHeaderMenu();
+        })
+    </script>
 </body>
 
 </html>

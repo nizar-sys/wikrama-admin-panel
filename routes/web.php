@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AlbumController;
+use App\Http\Controllers\Api\ApiController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\DataTableController;
@@ -29,7 +30,7 @@ use App\Http\Controllers\SliderController;
 
 # ------ Unauthenticated routes ------ #
 Route::get('/', [FrontEndController::class, 'landingPage']);
-Route::get('/detail/{page}', [FrontEndController::class, 'pageDetail'])->name('page.detail');
+Route::get('/{page}', [FrontEndController::class, 'pageDetail'])->name('page.detail');
 Route::get('/berita/{judul}', [FrontEndController::class, 'beritaDetail'])->name('berita.detail');
 Route::post('/send-message', [MessageController::class, 'store'])->name('send.message');
 
@@ -77,4 +78,8 @@ Route::prefix('dashboard')->group(function () {
         Route::resource('albums', AlbumController::class);
         Route::resource('messages', MessageController::class);
     });
+});
+
+Route::prefix('api')->group(function(){
+    Route::get('/header-menu', [ApiController::class, 'headerMenu']);
 });

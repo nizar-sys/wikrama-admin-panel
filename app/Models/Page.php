@@ -20,6 +20,10 @@ class Page extends Model
         'status',
     ];
 
+    protected $appends = [
+        'slug_title',
+    ];
+
     // scope active
     public function scopeActive($query)
     {
@@ -40,6 +44,11 @@ class Page extends Model
     public function scopeLastOrder($query)
     {
         return $query->orderBy('seq')->get('seq')->last()->seq ?? 0;
+    }
+
+    public function getSlugTitleAttribute()
+    {
+        return str()->slug($this->attributes['title']);
     }
     
 }
