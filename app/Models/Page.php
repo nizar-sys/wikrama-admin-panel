@@ -22,6 +22,7 @@ class Page extends Model
 
     protected $appends = [
         'slug_title',
+        'child_posts'
     ];
 
     // scope active
@@ -49,6 +50,11 @@ class Page extends Model
     public function getSlugTitleAttribute()
     {
         return str()->slug($this->attributes['title']);
+    }
+
+    public function getChildPostsAttribute()
+    {
+        return $this->posts()->where('status', 1)->get(['title', 'content']);
     }
     
 }

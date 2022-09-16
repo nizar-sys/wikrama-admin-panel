@@ -10,6 +10,11 @@ class Post extends Model
     use HasFactory;
     protected $fillable = ['page_id', 'title', 'content', 'media', 'seq', 'status', 'created_by', 'updated_by', 'deleted_at'];
 
+    protected $appends = [
+        'content_preview',
+        'slug_title',
+    ];
+
     protected static function boot()
     {
         parent::boot();
@@ -39,5 +44,15 @@ class Post extends Model
     public function scopeLastOrder($query)
     {
         return $query->orderBy('seq')->get('seq')->last()->seq ?? 0;
+    }
+
+    public function getContentPreviewAttribute()
+    {
+        return str()->limit($this->attributes['content'], 20);
+    }
+
+    public function getSlugTitleAttribute()
+    {
+        return str()->slug($this->attributes['title']);
     }
 }

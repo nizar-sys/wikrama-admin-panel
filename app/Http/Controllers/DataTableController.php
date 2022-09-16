@@ -129,9 +129,7 @@ class DataTableController extends Controller
             ->editColumn('title', fn ($slider) => str()->title($slider->title))
             ->editColumn('subtitle', fn ($slider) => str()->title($slider->subtitle))
             ->editColumn('media', function ($slider) {
-                $media = $slider->media;
-                $path = asset('/uploads/images/' . $media);
-                $type = pathinfo($path, PATHINFO_EXTENSION);
+                $path = $slider->media;
                 $img = '<img data-path="' . $path . '" onclick="showImageDetail(\'' . $path . '\')" src="' . $path . '" class="img-thumbnail img-thumb" width="200px" style="cursor: pointer;">';
                 return $img;
             })

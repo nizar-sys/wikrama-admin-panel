@@ -21,4 +21,10 @@ class Slider extends Model
     {
         return $query->where('status', 1);
     }
+
+    public function getMediaAttribute()
+    {
+        $path = asset('/uploads/images/' . $this->attributes['media']);
+        return $path;
+    }
 }
