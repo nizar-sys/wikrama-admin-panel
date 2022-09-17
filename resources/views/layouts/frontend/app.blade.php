@@ -11,12 +11,12 @@
     <!-- bagian import -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="icon" href="{{ asset('/frontend') }}/assets/wikrama-logo.png" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('/frontend') }}/css/header.css">
+    <link rel="icon" href="{{ asset('/frontend/assets/wikrama-logo.png') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('/frontend/css/header.css') }}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{{ asset('/frontend') }}/css/homepage.css">
-    <link rel="stylesheet" href="{{ asset('/frontend') }}/css/loading.css">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/homepage.css') }}">
+    <link rel="stylesheet" href="{{ asset('/frontend/css/loading.cs') }}s">
 
 
 
@@ -37,7 +37,7 @@
 <!-- header css nya satu  -->
 <header>
     <div class="header-wrap-texture">
-        <img class="header-texture" src="{{ asset('/frontend') }}/assets/header-texture.png">
+        <img class="header-texture" src="{{ asset('/frontend/assets/header-texture.png') }}">
         <div class="header">
             <div id="hamburger-icon-responsive">
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -60,7 +60,7 @@
                     <div id="indicator-section" class="indicator-section-three"></div>
                 </div>
                 <div class="wikrama-logo">
-                    <img src="{{ asset('/frontend') }}/assets/wikrama-logo.png" height="unset" width="unset"
+                    <img src="{{ asset('/frontend/assets/wikrama-logo.png') }}" height="unset" width="unset"
                         alt="Logo Wikrama">
                     <h3>SMK WIKRAMA BOGOR</h3>
                 </div>
@@ -101,7 +101,7 @@
             <!-- Content Grid 1 -->
             <div class="footer-content">
                 <div class="footer-logo">
-                    <img src="{{ asset('/frontend') }}/Assets/wikrama-logo.png" alt="Logo Wikrama">
+                    <img src="{{ asset('/frontend/assets/wikrama-logo.png') }}" alt="Logo Wikrama">
                     <h3>SMK WIKRAMA<br>BOGOR</h3>
                 </div>
 
