@@ -82,6 +82,7 @@ Route::prefix('api')->group(function(){
     Route::get('/pages', [ApiController::class, 'pagesData']);
     Route::get('/sliders', [ApiController::class, 'slidersData']);
     Route::get('/visitors', [ApiController::class, 'visitorsData']);
+    Route::get('/news', [ApiController::class, 'newsData']);
 });
 
 Route::get('/{page}', [FrontEndController::class, 'pageDetail'])->name('page.detail');

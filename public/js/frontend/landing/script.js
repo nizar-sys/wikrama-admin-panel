@@ -901,7 +901,15 @@ function loadingSkeleton() {
 }
 
 function renderCarousel(carousel, key) {
-  return "\n                <li id=\"carousel__slide".concat(++key, "\" tabindex=\"0\" class=\"carousel__slide h-100 w-100 img-fluid\">\n                    <img src=\"").concat(carousel.media, "\" alt=\"").concat(carousel.title, "\">\n                    <div class=\"carousel__snapper\"></div>\n                </li>\n            ");
+  return "\n        <li id=\"carousel__slide".concat(++key, "\" tabindex=\"0\" class=\"carousel__slide h-100 w-100 img-fluid\">\n            <img src=\"").concat(carousel.media, "\" alt=\"").concat(carousel.title, "\">\n            <div class=\"carousel__snapper\"></div>\n        </li>\n    ");
+}
+
+function renderNews(news) {
+  var title = news.title,
+      media = news.media,
+      content_preview = news.content_preview,
+      slug_title = news.slug_title;
+  return "\n        <div class=\"berita-terbaru\">\n            <div class=\"content-berita\">\n                <div class=\"container-berita\">\n                    <img src=\"".concat(assetsUrl + '/' + media, "\" alt=\"").concat(title, "\">\n                    <div class=\"tanggal-berita\">\n                        1 januari 2022\n                    </div>\n                    <div class=\"content-berita-text\">\n                        <p id=\"content-berita-text\">").concat(content_preview, "</p>\n                    </div>\n                    <a class=\"text-decoration-none\" id=\"content-berita-btn\" href=\"/berita/").concat(slug_title, "\">Baca</a>\n                </div>\n            </div>\n        </div>\n    ");
 }
 
 function getSliders() {
@@ -966,9 +974,49 @@ function _getVisitor() {
   return _getVisitor.apply(this, arguments);
 }
 
-$(document).ready(function () {
+function getNews() {
+  return _getNews.apply(this, arguments);
+}
+
+function _getNews() {
+  _getNews = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3() {
+    var newsData;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
+      while (1) {
+        switch (_context3.prev = _context3.next) {
+          case 0:
+            _context3.next = 2;
+            return HitData('/api/news');
+
+          case 2:
+            newsData = _context3.sent;
+
+            if (newsData.length > 0) {
+              newsData.map(function (news) {
+                $('#news-data').append(renderNews(news));
+              });
+            } else {
+              $('#news-wrapper').hide();
+            }
+
+          case 4:
+          case "end":
+            return _context3.stop();
+        }
+      }
+    }, _callee3);
+  }));
+  return _getNews.apply(this, arguments);
+}
+
+function callAllFuncs() {
   getSliders();
   getVisitor();
+  getNews();
+}
+
+$(document).ready(function () {
+  callAllFuncs();
 });
 })();
 

@@ -50,122 +50,13 @@
         </div>
     </div>
 
-    <div class="wrap-berita">
+    <div class="wrap-berita" id="news-wrapper">
         <div class="judul-homepage">
             <h3>Berita Terikini</h3>
             <div class="line-judul"></div>
         </div>
 
-        <div class="berita-berita">
-
-            <div class="berita-terbaru">
-                <div class="content-berita">
-                    <div class="container-berita">
-                        <img src="" alt="Berita">
-                        <div class="tanggal-berita">
-                            <p>01</p>
-                            <p>Januari</p>
-                            <p>2022</p>
-                        </div>
-                        <div class="content-berita-text">
-                            <p id="content-berita-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                        <button id="content-berita-btn">Baca</button>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="berita-terbaru">
-                <div class="content-berita">
-                    <div class="container-berita">
-                        <img src="" alt="Berita">
-                        <div class="tanggal-berita">
-                            <p>01</p>
-                            <p>Januari</p>
-                            <p>2022</p>
-                        </div>
-                        <div class="content-berita-text">
-                            <p id="content-berita-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                                nulla nibh, tincidunt quis metus quis.</p>
-                        </div>
-                        <button id="content-berita-btn">Baca</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="berita-terbaru">
-                <div class="content-berita">
-                    <div class="container-berita">
-                        <img src="" alt="Berita">
-                        <div class="tanggal-berita">
-                            <p>01</p>
-                            <p>Januari</p>
-                            <p>2022</p>
-                        </div>
-                        <div class="content-berita-text">
-                            <p id="content-berita-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                                nulla nibh, tincidunt quis metus quis.</p>
-                        </div>
-                        <button id="content-berita-btn">Baca</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="berita-terbaru">
-                <div class="content-berita">
-                    <div class="container-berita">
-                        <img src="" alt="Berita">
-                        <div class="tanggal-berita">
-                            <p>01</p>
-                            <p>Januari</p>
-                            <p>2022</p>
-                        </div>
-                        <div class="content-berita-text">
-                            <p id="content-berita-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                                nulla nibh, tincidunt quis metus quis.</p>
-                        </div>
-                        <button id="content-berita-btn">Baca</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="berita-terbaru">
-                <div class="content-berita">
-                    <div class="container-berita">
-                        <img src="" alt="Berita">
-                        <div class="tanggal-berita">
-                            <p>01</p>
-                            <p>Januari</p>
-                            <p>2022</p>
-                        </div>
-                        <div class="content-berita-text">
-                            <p id="content-berita-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                                nulla nibh, tincidunt quis metus quis.</p>
-                        </div>
-                        <button id="content-berita-btn">Baca</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="berita-terbaru">
-                <div class="content-berita">
-                    <div class="container-berita">
-                        <img src="" alt="Berita">
-                        <div class="tanggal-berita">
-                            <p>01</p>
-                            <p>Januari</p>
-                            <p>2022</p>
-                        </div>
-                        <div class="content-berita-text">
-                            <p id="content-berita-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                                nulla nibh, tincidunt quis metus quis.</p>
-                        </div>
-                        <button id="content-berita-btn">Baca</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="berita-berita" id="news-data"></div>
 
         <center><a id="next-page-a" href="">Baca Semua</a></center>
     </div>
@@ -409,5 +300,8 @@
 @endsection
 
 @push('script')
+    <script>
+        let assetsUrl = "{{ asset('/uploads/images/') }}"
+    </script>
     <script src="{{ mix('/js/frontend/landing/script.js') }}"></script>
 @endpush

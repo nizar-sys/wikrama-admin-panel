@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Page;
+use App\Models\Post;
 use App\Models\Slider;
 use App\Models\Visitor;
 use Carbon\Carbon;
@@ -34,5 +35,12 @@ class ApiController extends Controller
             'today' => sprintf('%04d', $visitorToday),
             'total' => sprintf('%04d', $totalVisitor),
         ]);
+    }
+
+    public function newsData()
+    {
+        $post = Post::active()->latest()->get(['title', 'created_at', 'media', 'content']);
+
+        return response()->json($post);
     }
 }
