@@ -21,7 +21,7 @@
                         <div class="form-group mb-3">
                             <label for="ecommerce">E-commerce</label>
                             <input type="text" class="form-control @error('ecommerce') is-invalid @enderror" id="ecommerce"
-                                placeholder="E-commerce" value="{{ old('ecommerce', $virtual->ecommerce) }}" name="ecommerce">
+                                placeholder="E-commerce" value="" name="ecommerce">
 
                             @error('ecommerce')
                                 <div class="d-block invalid-feedback">{{ $message }}</div>
@@ -31,7 +31,7 @@
                         <div class="form-group mb-3">
                             <label for="elearning">E-learning</label>
                             <input type="text" class="form-control @error('elearning') is-invalid @enderror" id="elearning"
-                                placeholder="E-learning" value="{{ old('elearning', $virtual->elearning) }}" name="elearning">
+                                placeholder="E-learning" value="" name="elearning">
 
                             @error('elearning')
                                 <div class="d-block invalid-feedback">{{ $message }}</div>
@@ -41,7 +41,7 @@
                         <div class="form-group mb-3">
                             <label for="mini_movie">Mini Movie</label>
                             <input type="text" class="form-control @error('mini_movie') is-invalid @enderror" id="mini_movie"
-                                placeholder="Mini Movie" value="{{ old('mini_movie', $virtual->mini_movie) }}" name="mini_movie">
+                                placeholder="Mini Movie" value="" name="mini_movie">
 
                             @error('mini_movie')
                                 <div class="d-block invalid-feedback">{{ $message }}</div>
@@ -51,7 +51,7 @@
                         <div class="form-group mb-3">
                             <label for="perpus">E-library</label>
                             <input type="text" class="form-control @error('perpus') is-invalid @enderror" id="perpus"
-                                placeholder="E-library" value="{{ old('perpus', $virtual->perpus) }}" name="perpus">
+                                placeholder="E-library" value="" name="perpus">
 
                             @error('perpus')
                                 <div class="d-block invalid-feedback">{{ $message }}</div>
