@@ -25,7 +25,7 @@
     <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
     <meta name="author" content="Creative Tim">
     <meta name="csrf-token" content="{{csrf_token()}}" >
-    <title>{{\App\Models\Setting::first()->site_title}} - @yield('title')</title>
+    <title>Smk Wikrama Bogor - @yield('title')</title>
     <!-- Favicon -->
     <link rel="icon" href="{{ asset('/assets/img/brand/smkwikrama.png') }}" type="image/png">
     <!-- Fonts -->
