@@ -25,7 +25,7 @@
     <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
     <meta name="author" content="Creative Tim">
     <meta name="csrf-token" content="{{csrf_token()}}" >
-    <title>Smk Wikrama Bogor - @yield('title')</title>
+    <title>SMK WIKRAMA BOGOR - @yield('title')</title>
     <!-- Favicon -->
     <link rel="icon" href="{{ asset('/assets/img/brand/smkwikrama.png') }}" type="image/png">
     <!-- Fonts -->
@@ -177,7 +177,6 @@
                             <nav aria-label="breadcrumb" class="d-md-inline-block ml-md-4">
                                 <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                                     @yield('breadcrumb')
-
                                 </ol>
                             </nav>
                         </div>

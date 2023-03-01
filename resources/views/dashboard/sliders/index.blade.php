@@ -7,7 +7,7 @@
     <li class="breadcrumb-item active">Slider</li>
 @endsection
 @section('content')
-    @include('_partials.modals.image-detail')
+@include('_partials.modals.image-detail')
     <div class="row">
         <div class="col-12">
             <div class="card shadow">
