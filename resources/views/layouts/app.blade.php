@@ -27,7 +27,7 @@
     <meta name="csrf-token" content="{{csrf_token()}}" >
     <title>{{\App\Models\Setting::first()->site_title}} - @yield('title')</title>
     <!-- Favicon -->
-    <link rel="icon" href="{{ asset('/assets/img/brand/favicon.png') }}" type="image/png">
+    <link rel="icon" href="{{ asset('/assets/img/brand/smkwikrama.png') }}" type="image/png">
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <!-- Icons -->
@@ -71,7 +71,8 @@
             <div class="sidenav-header d-flex align-items-center justify-content-center">
                 <a class="navbar-brand"
                     href="{{ route('home') }}">
-                    <img src="{{ asset('/assets/img/brand/blue.png') }}" class="navbar-brand-img" alt="...">
+                    <img src="{{ asset('/assets/img/brand/smkwikrama.png') }}" class="navbar-brand-img">
+                    <span class="fw-bold text-primary" style="font-size: 15px">SMK WIKRAMA BOGOR</span>
                 </a>
                 <div class="pr-3 sidenav-toggler sidenav-toggler-white d-lg-none" data-action="sidenav-pin"
                     data-target="#sidenav-main">
@@ -129,8 +130,12 @@
                                 aria-expanded="false">
                                 <div class="media align-items-center">
                                     <span class="avatar avatar-sm rounded-circle">
-                                        <img alt="Image placeholder"
+                                    @if($userAuth->avatar != 'avatar.png')
+                                    <img alt="Image placeholder"
                                             src="{{ asset('/uploads/images/' . $userAuth->avatar) }}">
+                                    @else
+                                    <img src="{{asset('assets/img/icons/profile.jpg')}}" alt="" width="200px">
+                                    @endif
                                     </span>
                                     <div class="media-body  ml-2  d-none d-lg-block">
                                         <span

@@ -272,18 +272,6 @@
                 <h4>syamsul</h4>
             </div>
 
-            <div class="container-pesan">
-                <div class="wrap-isi-pesan">
-                    <p>Lorem ipsum dolor sit amet. Sed rerum adipisci quo quidem voluptas et saepe reprehenderit aut
-                        officia omnis et aliquam sequi et quia necessitatibus a dicta sunt. Et aliquid voluptatum vel
-                        voluptatem dolorem et voluptatum dignissimos qui dolorem expedita est molestiae reprehenderit ex
-                        commodi omnis et vero Lorem ipsum dolor sit amet. Sed rerum adipisci quo quidem voluptas et
-                        saepe reprehenderit aut officia omnis et aliquam sequi et quia necessitatibus a dicta sunt. Et
-                        aliquid voluptatum vel voluptatem dolorem et voluptatum dignissimos qui dolorem expedita est
-                        molestiae reprehenderit ex commodi omnis et vero</p>
-                </div>
-                <h4>Nama Orang</h4>
-            </div>
 
             <div class="container-pesan">
                 <div class="wrap-isi-pesan">

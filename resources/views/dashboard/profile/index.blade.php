@@ -23,10 +23,19 @@
                                 @method('PUT')
 
                                 <input type="hidden" name="oldImage" id="oldImage" value="{{ $user->avatar }}">
-                                <input type="file" class="d-none" name="image" id="uploadImage"><img
+                                <input type="file" class="d-none" name="image" id="uploadImage">
+                                @if($user->avatar != 'avatar.png')
+                                    <img
                                     style="cursor: pointer;"
                                     src="{{ asset('/uploads/images/' . $user->avatar) }}"
                                     class="rounded-circle" id="avaImage">
+                                    @else
+                                    <img
+                                    style="cursor: pointer;"
+                                    src="{{ asset('assets/img/icons/profile.jpg') }}"
+                                    class="rounded-circle" id="avaImage">
+                                    @endif
+                                
                             </form>
 
                         </div>

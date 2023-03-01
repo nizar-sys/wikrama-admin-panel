@@ -46,7 +46,8 @@
     <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="{{ route('login') }}">
-                <img src="{{ asset('/assets/img/brand/white.png') }}">
+                <img src="{{ asset('/assets/img/brand/smkwikrama.png') }}" style= "width:40px; height:40px;">
+                <span class="nav-link-inner--text p-2">SMK Wikrama Bogor</span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse"
                 aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,40 +77,28 @@
                             <span class="nav-link-inner--text">Login</span>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <span class="nav-link-inner--text">Register</span>
-                        </a>
-                    </li>
                 </ul>
                 <hr class="d-lg-none" />
                 <ul class="navbar-nav align-items-lg-center ml-lg-auto">
                     <li class="nav-item">
-                        <a class="nav-link nav-link-icon" href="https://www.instagram.com/emnizaar" target="_blank"
+                        <a class="nav-link nav-link-icon" href="https://www.instagram.com/smkwikrama/" target="_blank"
                             data-toggle="tooltip" data-original-title="Follow us on Instagram">
                             <i class="fab fa-instagram"></i>
                             <span class="nav-link-inner--text d-lg-none">Instagram</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-icon" href="https://twitter.com/jokiicode" target="_blank"
-                            data-toggle="tooltip" data-original-title="Follow us on Twitter">
-                            <i class="fab fa-twitter-square"></i>
-                            <span class="nav-link-inner--text d-lg-none">Twitter</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-icon" href="https://github.com/nizar-sys" target="_blank"
-                            data-toggle="tooltip" data-original-title="Star us on Github">
-                            <i class="fab fa-github"></i>
-                            <span class="nav-link-inner--text d-lg-none">Github</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-icon" href="mailto:nizarid04@email.com" target="_blank"
+                        <a class="nav-link nav-link-icon" href="mailto:prohumasi@smkwikrama.sch.id" target="_blank"
                             data-toggle="tooltip" data-original-title="Mail us on Email">
                             <i class="fas fa-envelope"></i>
                             <span class="nav-link-inner--text d-lg-none">Mail</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-icon" href="https://wa.me/+6281909242411" target="_blank"
+                            data-toggle="tooltip" data-original-title="Contact us on phone">
+                            <i class="fas fa-phone"></i>
+                            <span class="nav-link-inner--text d-lg-none">No. Telp</span>
                         </a>
                     </li>
                 </ul>
@@ -120,13 +109,13 @@
     @yield('content')
 
     <!-- Footer -->
-    <footer class="py-5" id="footer-main">
+    <footer class="p-5" id="footer-main">
         <div class="container">
             <div class="row align-items-center justify-content-xl-between">
                 <div class="col-xl-6">
                     <div class="copyright text-center text-xl-left text-muted">
                         &copy; {{ date('Y') }} <a href="https://www.creative-tim.com" class="font-weight-bold ml-1"
-                            target="_blank">Creative Tim</a>
+                            target="_blank">SMK WIKRAMA BOGOR</a>
                     </div>
                 </div>
             </div>
