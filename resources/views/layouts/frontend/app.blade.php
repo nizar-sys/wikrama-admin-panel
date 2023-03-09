@@ -56,7 +56,7 @@
                     <div id="indicator-section" class="indicator-section-two"></div>
                 </div>
                 <div id="section-wrap">
-                    <a href="">PPDB 2022-2023</a>
+                    <a href="https://ppdb.smkwikrama.sch.id/">PPDB 2022-2023</a>
                     <div id="indicator-section" class="indicator-section-three"></div>
                 </div>
                 <div class="wikrama-logo">
@@ -83,7 +83,7 @@
         </div>
         <div class="anak-header-dan-headernya">
             <div class="header-below" id="header-menus">
-                <a href="" class="section-header-below active-head-menu">Home</a>
+                <a href="/" class="section-header-below active-head-menu">Home</a>
             </div>
 
             <div class="child-header-below" id="child-header-menus"></div>

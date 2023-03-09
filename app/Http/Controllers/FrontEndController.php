@@ -11,4 +11,10 @@ class FrontEndController extends Controller
         event(new NewVisitors());
         return view('frontend.landing.index');
     }
+
+    public function pageDetail()
+    {
+        event(new NewVisitors());
+        return view('frontend.landing.index');
+    }
 }
