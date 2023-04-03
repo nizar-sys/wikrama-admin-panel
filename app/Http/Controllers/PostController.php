@@ -43,10 +43,14 @@ class PostController extends Controller
             'seq' => $lastOrder + 1,
         ];
 
-        // upload media
-        $fileName = time() . '-post.' . $request->file('media')->getClientOriginalExtension();
-        $request->file('media')->move(public_path('uploads/images/'), $fileName);
-        $validated['media'] = $fileName;
+        $newName = '';
+        if($request->file('media')){
+            $extension = $request->file('media')->getClientOriginalExtension();
+            $newName = 'pages'.'-'.now()->timestamp.'.'.$extension;
+            $request->file('media')->storeAs('image', $newName);
+        }
+
+        $request['image'] = $newName;
 
         $post = Post::create($validated);
 
