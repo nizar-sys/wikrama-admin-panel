@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+footer {
+    max-width: 100%;
+    height: auto;
+    background-color: #001E42;
+    position: relative;
+}
+
+/* --- Footer Top Content --- */
+footer .footer-top {
+    max-width: 100%;
+    padding: 50px 80px 0px 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding-bottom: 50px;
+}
+
+footer .footer-top .footer-content {
+    width: 100%;
+    height: 100%;
+    letter-spacing: .5px;
+}
+
+/* Footer Content 1 */
+.footer-content .footer-logo {
+    display: flex;
+    align-items: center;
+    width: 70%;
+}
+.footer-content .footer-logo img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+.footer-content .footer-logo h3 {
+    color: white;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.footer-content .footer-alamat,
+.footer-content .footer-telepon {
+    margin-top: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    width: 70%;
+    padding-bottom: 15px;
+}
+.footer-content .footer-alamat h4,
+.footer-content .footer-telepon h4 {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.footer-content .footer-alamat a,
+.footer-content .footer-telepon a,
+.footer-content .footer-telepon p {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-content .footer-sosmed {
+    margin-top: 20px;
+}
+.footer-content .footer-sosmed li {
+    list-style-type: none;
+    float: left;
+}
+.footer-content .footer-sosmed a {
+    color: white;
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+
+/* Footer Content 2 */
+.footer-content-about h4,
+.footer-content-chat h4 {
+    color: white;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.footer-content-about li {
+    margin-bottom: 15px;
+    margin-left: 10px;
+    color: white;
+}
+.footer-content-about li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* Footer Content 3 */
+.footer-content-chat  {
+    display: flex;
+    justify-content: end;
+}
+.footer-content-chat .chat-content {
+    width: 250px;
+}
+.footer-content-chat input,
+.footer-content-chat textarea{
+    width: 240px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid grey;
+    padding: 5px 0px 5px 10px;
+    margin-bottom: 8px;
+    margin-left: -10px;
+}
+.footer-content-chat input:focus,
+.footer-content-chat textarea:focus{
+    outline: 3px solid rgba(255, 255, 0, 0.5);
+}
+.footer-content .form-content::placeholder {
+    color: rgba(128, 128, 128, 0.7);
+}
+.footer-content-chat textarea{ 
+    height: 120px;
+}
+.footer-content-chat .form-content {
+    text-align: right;
+}
+.footer-content-chat .form-content button {
+    background-color: #E3CE0F;
+    color: white;
+    border: none;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+
+/* --- Footer Copyright --- */
+footer .copyright {
+    width: 100%;
+    height: 50px;
+    background-image: url(/frontend/Assets/header-texture.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .copyright h3 {
+    font-weight: 400;
+}
+
+
+footer .footer-content-hidden {
+    display: none;
+}
+
+
+@media only screen and (max-width: 900px) {
+    /* --- Footer Top Content --- */
+    footer .footer-top {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    footer .footer-content-hidden {
+        display: block;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    /* --- Footer Top Content --- */
+    footer .footer-top {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 50px 20px 0px 20px;
+    }
+    footer .footer-content-hidden {
+        display: none;
+    }
+
+    .footer-content .footer-logo {
+        width: 100%;
+    }
+    .footer-content .footer-alamat,
+    .footer-content .footer-telepon {
+        width: 100%;
+    }
+
+    .footer-content-chat .chat-content {
+        width: 100%;
+        position: relative;
+    }
+    .footer-content-chat input,
+    .footer-content-chat textarea{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .footer-content-chat .form-content {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .footer-content-chat .form-content button {
+        width: 50%;
+        height: 40px;
+    }
+
+    footer .copyright {
+        max-width: 100%;
+        height: auto;
+        text-align: center;
+        padding: 5px 0px;
+    }
+    footer .copyright h3 {
+        font-size: 18px;
+    }
+}

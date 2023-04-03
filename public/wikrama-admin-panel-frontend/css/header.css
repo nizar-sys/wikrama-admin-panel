@@ -1,0 +1,366 @@
+header {
+    position: fixed;
+    z-index: 4;
+    width: 100%;
+}
+
+.header {
+    padding: 1vh;
+    display: flex;
+    align-items: center;
+    height: 16vh;
+    width: 100%;
+    background-color: white;
+}
+
+.header-section-wrap {
+    justify-content:space-evenly;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+}
+
+.header-section-wrap a{
+    cursor: pointer;
+    font-weight: 500;
+    opacity: 0.7;
+    padding: 10px 1px ;
+    transition: 400ms;
+}
+
+#section-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hamburger-icon-responsive {
+    display: none;
+    margin: 0 20px 0 5px;
+}
+
+.indicator-section-one,.indicator-section-two,.indicator-section-three {
+    border-radius: 50px;
+    height: 2px;
+    width: 0px;
+    opacity: 0;
+    background: #001E42;
+    transition: 400ms;
+}
+
+.header-section-wrap a:hover{
+    opacity: 1;
+}
+
+.header-section-wrap a:hover + #indicator-section {
+    width: 60px;
+    opacity: 1;
+}
+
+#indicator-section.indicator-section-on {
+    width: 60px;
+    opacity: 1;
+}
+
+.header-texture {
+    pointer-events: none;
+    width: 100%;
+    height: 16vh;
+    mix-blend-mode: multiply;
+    opacity: 0.8;
+    object-fit: cover;
+    object-position: 0.5vh 30%;
+    position: absolute;
+    z-index: 0;
+}
+
+.btn-header {
+    margin-right: 5vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-contact-us {
+    border: none;
+    height: 38px;
+    width: 115px;
+    font-size: 15px;
+    border-radius: 5px;
+    font-weight: 400;
+    background-color: #223987;
+    color: white;
+}
+
+.btn-contact-us, .btn-contact-search {
+    margin: 0 10px;    
+}
+
+.btn-contact-search {
+    width: 130px;
+}
+
+.btn-contact-search  label {
+    position: absolute;
+    margin: 7px 0 0 8px;
+}
+
+#input-search{
+    padding: 0 34px;
+    height: 38px;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    border: solid 2px black;
+}
+
+#input-search:focus {
+    border-radius: 5px;
+}
+
+.btn-contact-search svg,p{
+    margin: 0 5px;
+}
+
+.wikrama-logo {
+    margin-right: 12vh;
+    display: flex;
+    flex-direction: row;
+    width: 40vh;
+    align-items: center;
+}
+.wikrama-logo h3 {
+    color: #001E42;
+    font-weight: 500;
+    font-size: 2.5vh;
+}
+
+.wikrama-logo img{
+    height: 12vh;
+    width: auto;
+    padding-right: 1.5vh;
+}
+
+.header-below {
+    z-index: 4;
+    position: relative;
+    padding: 0 4vh;
+    background: #001E42;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.header-below a {
+    text-align: center;
+    margin: 0 10px;
+    font-size: 100%;
+    color: white;
+    padding: 1.5vh 0;
+    opacity: 0.7;
+    border-bottom: solid 2px #001E42;
+    transition: 50ms;
+}
+
+.header-below a:hover {
+    opacity: 1;
+    border-bottom: solid 2px #FFE603;
+}
+
+#section-header-below-discovery.active-head-discovery {
+    border-bottom: solid 2px #FFE603;
+    opacity: 1;
+}
+
+#section-header-below-major-competency.active-head-major {
+    border-bottom: solid 2px #FFE603;
+    opacity: 1;
+}
+
+#section-header-below-education.active-head-education {
+    border-bottom: solid 2px #FFE603;
+    opacity: 1;
+}
+
+#section-header-below-cultures.active-head-cultures {
+    border-bottom: solid 2px #FFE603;
+    opacity: 1;
+}
+
+#section-header-below-campus.active-head-campus {
+    border-bottom: solid 2px #FFE603;
+    opacity: 1;
+}
+
+#section-header-below-bkk.active-head-bkk {
+    border-bottom: solid 2px #FFE603;
+    opacity: 1;
+}
+
+#section-header-below-berita.active-berita {
+    border-bottom: solid 2px #FFE603;
+    opacity: 1;
+}
+
+.section-header-below-1 {
+    margin-left: 6px;
+}
+
+.anak-discovery {
+    display: none;
+    position: absolute;
+    z-index: 4;
+    transform: translate(13%, 0);
+}
+
+.anak-major {
+    display: none;
+    position: absolute;
+    z-index: 4;
+    transform: translate(16%,0);
+}
+
+.anak-major.active-major {
+    display: block;
+}
+
+.anak-discovery.active-discovery {
+    display: block;
+}
+
+.anak-education {
+    display: none;
+    position: absolute;
+    z-index: 4;
+    transform: translate(9%, 0);
+}
+
+.anak-education.active-education {
+    display: block;
+}
+
+.anak-cultures {
+    display: none;
+    position: absolute;
+    z-index: 4;
+    transform: translate(7%, 0);
+}
+
+.anak-cultures.active-cultures {
+    display: block;
+}
+
+.anak-campus {
+    display: none;
+    position: absolute;
+    z-index: 4;
+    transform: translate(5%,0);
+}
+
+.anak-campus.active-campus {
+    display: block;
+}
+
+.anak-bkk {
+    display: none;
+    position: absolute;
+    z-index: 4;
+    transform: translate(6%,0);
+}
+
+.anak-bkk.active-bkk {
+    display: block;
+}
+
+.anak-berita {
+    display: none;
+    position: absolute;
+    z-index: 4;
+    transform: translate(13%,0);
+}
+
+.anak-berita.active-berita {
+    display: block;
+}
+
+.semua-anak {
+    background-color: white;
+    width: 70rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 15px 10px 35px 10px;
+    border: solid 2px #001E42;
+    border-radius: 5px;
+}
+
+.semua-anak .anak {
+    width: 20rem;
+    padding: 20px 20px;
+    margin: 0 20px;
+    background-color: white;
+    cursor: pointer;
+    border-bottom: solid 2px #dbdbdb;
+}
+
+
+.semua-anak .anak:hover {
+    background-color: rgb(228, 228, 228);
+}
+
+.semua-anak .anak h3 {
+    color: #3a3a3a;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+
+.semua-anak .anak p {
+    color: #3a3a3a;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 1200px) {
+    #section-wrap {
+        display: none;
+    }
+    #hamburger-icon-responsive {
+        display: block;
+    } 
+    .wikrama-logo img{
+        height: 9vh;
+        width: auto;
+        padding-right: 1.5vh;
+    }
+    .btn-header {
+        display: none;
+    }    
+    .wikrama-logo{
+        height: 200px;
+        width: auto;
+        padding-right: 1.5vh;
+    }
+}
+
+/* HomePage */
+
+.active-dropdown {
+    display: block !important;
+}
+
+.active-head-menu {
+    border-bottom: solid 2px #FFE603 !important;
+    opacity: 1 !important;
+}
+
+.child-dropdown {
+    display: none;
+    position: absolute !important;
+    z-index: 4 !important;
+    transform: translate(7%, 0) !important;
+}
