@@ -38,7 +38,7 @@ function renderChildMenu(parent_menu, posts) {
                     }" class="anak">
                         <h3>${post.title}</h3>
                         <p>${post.content_preview}</p>
-                    </a> 
+                    </a>
                 `;
     });
 
@@ -55,7 +55,11 @@ function renderHeaderMenu(menu) {
             renderChildMenu(slug_title, child_posts)
         );
     }
-    return `<a href="${slug_title}" class="section-header-below menu-${slug_title}" data-has-child="${child_posts.length}" data-target="${slug_title}">${title}</a>`;
+    return `<a href="${
+        baseUrl + "/" + slug_title
+    }" class="section-header-below menu-${slug_title}" data-has-child="${
+        child_posts.length
+    }" data-target="${slug_title}">${title}</a>`;
 }
 
 async function getHeaderMenu() {

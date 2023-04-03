@@ -30,8 +30,10 @@ use App\Http\Controllers\SliderController;
 
 # ------ Unauthenticated routes ------ #
 Route::get('/', [FrontEndController::class, 'landingPage']);
+Route::get('/{page}', [FrontEndController::class, 'pageDetail'])->name('page.detail');
 Route::get('/berita/{judul}', [FrontEndController::class, 'beritaDetail'])->name('berita.detail');
 Route::post('/send-message', [MessageController::class, 'store'])->name('send.message');
+
 
 # ------ Backend routes ------ #
 Route::prefix('dashboard')->group(function () {
@@ -84,5 +86,3 @@ Route::prefix('api')->group(function(){
     Route::get('/visitors', [ApiController::class, 'visitorsData']);
     Route::get('/news', [ApiController::class, 'newsData']);
 });
-
-Route::get('/{page}', [FrontEndController::class, 'pageDetail'])->name('page.detail');
