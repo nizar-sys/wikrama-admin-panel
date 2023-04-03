@@ -12,10 +12,10 @@ class FrontEndController extends Controller
         return view('frontend.landing.index');
     }
 
-    public function pageDetail()
+    public function pageDetail($slugTitle)
     {
         event(new NewVisitors());
-        return view('frontend.landing.index');
+        return view('frontend.landing.berita');
     }
 
     public function beritaDetail()

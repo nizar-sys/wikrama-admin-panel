@@ -903,7 +903,7 @@ function loadingSkeleton() {
 function renderChildMenu(parent_menu, posts) {
   var html = "\n            <div class=\"child-dropdown child-menu-".concat(parent_menu, "\" data-parent=\"").concat(parent_menu, "\">\n                <div class=\"semua-anak child-menus\">\n            ");
   posts.map(function (post) {
-    html += "\n                    <a href=\"".concat(baseUrl + "/berita/" + post.slug_title, "\" class=\"anak\">\n                        <h3>").concat(post.title, "</h3>\n                        <p>").concat(post.content_preview, "</p>\n                    </a> \n                ");
+    html += "\n                    <a href=\"".concat(baseUrl + "/berita/" + post.slug_title, "\" class=\"anak\">\n                        <h3>").concat(post.title, "</h3>\n                        <p>").concat(post.content_preview, "</p>\n                    </a>\n                ");
   });
   html += "</div>\n            </div>";
   return html;
@@ -918,7 +918,7 @@ function renderHeaderMenu(menu) {
     $("#child-header-menus").append(renderChildMenu(slug_title, child_posts));
   }
 
-  return "<a href=\"".concat(slug_title, "\" class=\"section-header-below menu-").concat(slug_title, "\" data-has-child=\"").concat(child_posts.length, "\" data-target=\"").concat(slug_title, "\">").concat(title, "</a>");
+  return "<a href=\"".concat(baseUrl + "/" + slug_title, "\" class=\"section-header-below menu-").concat(slug_title, "\" data-has-child=\"").concat(child_posts.length, "\" data-target=\"").concat(slug_title, "\">").concat(title, "</a>");
 }
 
 function getHeaderMenu() {
