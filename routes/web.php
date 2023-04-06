@@ -41,7 +41,7 @@ Route::prefix('dashboard')->group(function () {
 
     # ------ Authenticated routes ------ #
     Route::middleware('auth')->group(function () {
-        Route::get('/', [RouteController::class, 'dashboard'])->name('home'); # dashboard
+        Route::get('/home', [RouteController::class, 'dashboard'])->name('home'); # dashboard
 
         Route::prefix('profile')->group(function () {
             Route::get('/', [ProfileController::class, 'myProfile'])->name('profile');
