@@ -9,6 +9,17 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->Post= new Post();
+    }
+
+    public function tampildata()
+    {
+        $data= $this->Post->alldata(); 
+        return response()->json($data);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -38,20 +49,24 @@ class PostController extends Controller
      */
     public function store(RequestStoreOrUpdatePosts $request)
     {
+
         $lastOrder = Post::lastOrder();
         $validated = $request->validated() + [
             'seq' => $lastOrder + 1,
+            'content' => 'required',
+            'title' => 'required',
+            'media'=>'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ];
 
         $newName = '';
         if($request->file('media')){
             $extension = $request->file('media')->getClientOriginalExtension();
-            $newName = 'pages'.'-'.now()->timestamp.'.'.$extension;
+            $newName = $request->title.'-'.now()->timestamp.'.'.$extension;
             $request->file('media')->storeAs('image', $newName);
         }
 
         $request['image'] = $newName;
-
+        
         $post = Post::create($validated);
 
         return redirect(route('posts.index'))->with('success', 'Post created successfully');
@@ -63,9 +78,11 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show(Post $post, $seq)
     {
-        return $post;
+        $pages = Page::all(['id', 'title', 'media'])->first();
+        $post = Post::findOrFail($seq);
+        return view('frontend.landing.berita', compact('post', 'pages'));
     }
 
     /**

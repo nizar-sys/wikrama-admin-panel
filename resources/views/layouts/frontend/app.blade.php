@@ -83,7 +83,7 @@
         </div>
         <div class="anak-header-dan-headernya">
             <div class="header-below" id="header-menus">
-                <a href="/" class="section-header-below active-head-menu">Home</a>
+                <a href="{{route('home.page')}}" class="section-header-below active-head-menu">Home</a>
             </div>
 
             <div class="child-header-below" id="child-header-menus"></div>
@@ -126,10 +126,10 @@
                 </div>
 
                 <div class="footer-sosmed">
-                    <li></li><a href=""><i class="fa-brands fa-facebook-square"></i></a></li>
+                    <li></li><a href="https://web.facebook.com/smkwikrama"><i class="fa-brands fa-facebook-square"></i></a></li>
                     <li></li><a href=""><i class="fa-brands fa-twitter-square"></i></a></li>
-                    <li></li><a href=""><i class="fa-brands fa-instagram-square"></i></a></li>
-                    <li></li><a href=""><i class="fa-brands fa-youtube-square"></i></a></li>
+                    <li></li><a href="https://www.instagram.com/smkwikrama/"><i class="fa-brands fa-instagram-square"></i></a></li>
+                    <li></li><a href="https://www.youtube.com/@multimediawikrama7482"><i class="fa-brands fa-youtube-square"></i></a></li>
                 </div>
             </div>
 

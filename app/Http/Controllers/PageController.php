@@ -6,6 +6,7 @@ use App\Http\Requests\RequestStoreOrUpdatePage;
 use App\Models\Page;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class PageController extends Controller
 {
@@ -45,10 +46,15 @@ class PageController extends Controller
             'seq' => $lastOrder + 1,
         ];
 
+        // $nama_folder = "page" . $request->title;
+        // $name = $request->file('media')->getClientOriginalName();
+        // $media = Storage::put("public/" . $nama_folder, $request->file('media'));
+
+
         $newName = '';
         if($request->file('media')){
             $extension = $request->file('media')->getClientOriginalExtension();
-            $newName = 'pages'.'-'.now()->timestamp.'.'.$extension;
+            $newName = $request->title.'-'.now()->timestamp.'.'.$extension;
             $request->file('media')->storeAs('image', $newName);
         }
 

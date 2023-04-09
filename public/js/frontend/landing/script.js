@@ -908,8 +908,9 @@ function renderNews(news) {
   var title = news.title,
       media = news.media,
       content_preview = news.content_preview,
-      slug_title = news.slug_title;
-  return "\n        <div class=\"berita-terbaru\">\n            <div class=\"content-berita\">\n                <div class=\"container-berita\">\n                    <img src=\"".concat(assetsUrl + '/' + media, "\" alt=\"").concat(title, "\">\n                    <div class=\"tanggal-berita\">\n                        1 januari 2022\n                    </div>\n                    <div class=\"content-berita-text\">\n                        <p id=\"content-berita-text\">").concat(content_preview, "</p>\n                    </div>\n                    <a class=\"text-decoration-none\" id=\"content-berita-btn\" href=\"/berita/").concat(slug_title, "\">Baca</a>\n                </div>\n            </div>\n        </div>\n    ");
+      seq = news.seq;
+      
+  return "\n        <div class=\"berita-terbaru\">\n            <div class=\"content-berita\">\n                <div class=\"container-berita\">\n                    <img src=\"".concat(assetsUrl + '/' + media, "\" alt=\"").concat(title, "\">\n                    <div class=\"tanggal-berita\">\n                        1 januari 2023\n                    </div>\n                    <div class=\"content-berita-text\">\n                        <p id=\"content-berita-text\">").concat(content_preview, "</p>\n                    </div>\n                    <a class=\"text-decoration-none\" id=\"content-berita-btn\" href=\"/berita/").concat(1, "\">Baca</a>\n                </div>\n            </div>\n        </div>\n    ");
 }
 
 function getSliders() {

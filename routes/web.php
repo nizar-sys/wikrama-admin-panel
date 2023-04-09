@@ -29,10 +29,11 @@ use App\Http\Controllers\SliderController;
 */
 
 # ------ Unauthenticated routes ------ #
-Route::get('/', [FrontEndController::class, 'landingPage']);
+Route::get('/', [FrontEndController::class, 'landingPage'])->name('home.page');
 Route::get('/{page}', [FrontEndController::class, 'pageDetail'])->name('page.detail');
-Route::get('/berita/{judul}', [FrontEndController::class, 'beritaDetail'])->name('berita.detail');
+Route::get('/berita/{id}', [PostController::class, 'show'])->name('berita.detail');
 Route::post('/send-message', [MessageController::class, 'store'])->name('send.message');
+Route::get('/posts/tampildata', [PostController::class, 'tampildata']);
 
 
 # ------ Backend routes ------ #
