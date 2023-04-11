@@ -78,10 +78,10 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post, $seq)
+    public function show(Post $post, $slug_title)
     {
         $pages = Page::all(['id', 'title', 'media'])->first();
-        $post = Post::findOrFail($seq);
+        $post = Post::where('slug_title', $slug_title)->first();
         return view('frontend.landing.berita', compact('post', 'pages'));
     }
 

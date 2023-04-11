@@ -19,4 +19,11 @@ class FrontEndController extends Controller
         event(new NewVisitors());
         return view('frontend.landing.index');
     }
+
+    // public function show(Post $post, $slug_title)
+    // {
+    //     $pages = Page::all(['id', 'title', 'media'])->first();
+    //     $post = Post::where('slug_title', $slug_title)->first();
+    //     return view('frontend.landing.berita', compact('post', 'pages'));
+    // }
 }
