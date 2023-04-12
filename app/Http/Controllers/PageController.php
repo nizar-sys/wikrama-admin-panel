@@ -51,18 +51,29 @@ class PageController extends Controller
         // $media = Storage::put("public/" . $nama_folder, $request->file('media'));
 
 
-        $newName = '';
-        if($request->file('media')){
-            $extension = $request->file('media')->getClientOriginalExtension();
-            $newName = $request->title.'-'.now()->timestamp.'.'.$extension;
-            $request->file('media')->storeAs('image', $newName);
-        }
+        // $newName = '';
+        // if($request->file('media')){
+        //     $extension = $request->file('media')->getClientOriginalExtension();
+        //     $newName = $request->title.'-'.now()->timestamp.'.'.$extension;
+        //     $request->file('media')->storeAs('image', $newName);
+        // }
 
-        $request['image'] = $newName;
+        // $request['image'] = $newName;
 
         $validated['seo_key'] = str()->lower(implode(', ', explode(' ', $validated['seo_key'])));
 
-        $newPage = Page::create($validated);
+        // $newPage = Page::create($validated);
+        $path = Storage::put("public", $request->file('media'));
+        Page::create([
+            'seq' => $lastOrder + 1,
+            'seo_key' => $request->seo_key,
+            'seo_desc' => $request->seo_desc,
+            'media' => $path,
+            'link' => $request->link,
+            'subtitle' => $request->subtitle,
+            'title' => $request->title,
+            'content' => $request->content,
+        ]);
 
         return redirect(route('pages.index'))->with('success', 'Page created successfully.');
     }

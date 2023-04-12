@@ -289,7 +289,7 @@
 
 @push('script')
     <script>
-        let assetsUrl = "{{ asset('/image/') }}"
+        let assetsUrl = "{{ asset('/storage/') }}"
     </script>
     <script src="{{ mix('/js/frontend/landing/script.js') }}"></script>
 @endpush

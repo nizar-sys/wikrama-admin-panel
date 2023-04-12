@@ -6,7 +6,7 @@ use App\Http\Requests\RequestStoreOrUpdatePosts;
 use App\Models\Page;
 use App\Models\Post;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Storage;
 class PostController extends Controller
 {
 
@@ -59,16 +59,25 @@ class PostController extends Controller
         ];
 
 
-        $newName = '';
-        if($request->file('media')){
-            $extension = $request->file('media')->getClientOriginalExtension();
-            $newName = $request->title.'-'.now()->timestamp.'.'.$extension;
-            $request->file('media')->storeAs('image', $newName);
-        }
+        // $newName = '';
+        // if($request->file('media')){
+        //     $extension = $request->file('media')->getClientOriginalExtension();
+        //     $newName = $request->title.'-'.now()->timestamp.'.'.$extension;
+        //     $request->file('media')->storeAs('image', $newName);
+        // }
 
-        $request['image'] = $newName;
+        // $request['image'] = $newName;
         
-        $post = Post::create($validated);
+        // $post = Post::create($validated);
+
+        $path = Storage::put("public", $request->file('media'));
+        Post::create([
+            'seq' => $lastOrder + 1,
+            'content' => $request->content,
+            'title' => $request->title,
+            'media' => $path,
+            'page_id' => $request->page_id,
+        ]);
 
         return redirect(route('posts.index'))->with('success', 'Post created successfully');
     }

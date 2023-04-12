@@ -49,8 +49,8 @@
                 margin-left: auto;
                 margin-right: auto;
                 width: 30%;
-                margin-bottom: 30px;" src="{{asset('storage/image/'.$pages->media)}}" alt="" ></p>
-    <p class="mb-5">{{$post->content}}</p>
+                margin-bottom: 30px;" src="{{asset('storage/'.$post->media)}}" alt="asdasd" ></p>
+    <p class="mb-5">{!!$post->content!!}</p>
     </div>	
     </article><!-- post-id -->
     </div>
@@ -64,7 +64,7 @@
 @push('script')
     
     <script>
-        let assetsUrl = "{{ asset('/storage/image/') }}"
+        let assetsUrl = "{{ asset('/storage/') }}"
     </script>
     <script src="{{ mix('/js/frontend/landing/script.js') }}"></script>
 @endpush
