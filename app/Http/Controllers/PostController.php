@@ -58,6 +58,7 @@ class PostController extends Controller
             'media'=>'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ];
 
+
         $newName = '';
         if($request->file('media')){
             $extension = $request->file('media')->getClientOriginalExtension();

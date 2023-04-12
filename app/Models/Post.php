@@ -13,6 +13,8 @@ class Post extends Model
     use Sluggable;
     protected $fillable = ['page_id', 'title', 'content', 'media', 'seq', 'status', 'created_by', 'updated_by', 'deleted_at', 'slug_title'];
 
+    protected $guarded = [];
+
     protected $appends = [
         'content_preview',
         'slug_title',
